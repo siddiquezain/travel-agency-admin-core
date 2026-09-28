@@ -7,7 +7,6 @@ import GppGood from "@mui/icons-material/GppGood";
 import WorkspacePremium from "@mui/icons-material/WorkspacePremium";
 import SupportAgent from "@mui/icons-material/SupportAgent";
 import Flight from "@mui/icons-material/Flight";
-import Globe from "../../components/Globe";
 import {
   radius,
   cardBg,
@@ -247,21 +246,7 @@ const WhyChooseUs = () => {
                 }}
               />
 
-              {/* Globe container */}
-              <Box
-                sx={{
-                  position: "relative",
-                  borderRadius: "50%",
-                  width: { xs: 280, sm: 420, md: 540 },
-                  height: { xs: 280, sm: 420, md: 540 },
-                  "& canvas": { borderRadius: "50%" },
-                  zIndex: 1,
-                }}
-              >
-                <Globe width={540} height={540} />
-              </Box>
-
-              {/* Floating stat badges */}
+{/* Floating stat badges */}
               <Box
                 component={motion.div}
                 initial={{ opacity: 0, x: -20 }}

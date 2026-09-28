@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import RouterLink from "next/link";
 import { useParams } from "next/navigation";
 import MobileStickyCTA from '../../../components/MobileStickyCTA';
-import RelatedServices from '../../../components/RelatedServices';
 import {
   Box,
   Container,
@@ -840,9 +839,7 @@ const TourDetail = ({ initialData = null, related = [] }) => {
         </Grid>
       </Container>
 
-      <RelatedServices items={related} type="tour" />
-
-      <MobileStickyCTA
+<MobileStickyCTA
         title="Book this tour"
         whatsappMessage={`Hi, I'm interested in the tour: ${title}`}
       />

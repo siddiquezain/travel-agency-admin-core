@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import RouterLink from "next/link";
 import { useParams } from "next/navigation";
 import MobileStickyCTA from '../../../components/MobileStickyCTA';
-import RelatedServices from '../../../components/RelatedServices';
 import {
   Box,
   Container,
@@ -244,9 +243,7 @@ const AttestationDetail = ({ initialData = null, related = [] }) => {
         </Grid>
       </Container>
 
-      <RelatedServices items={related} type="attestation" heading="Other Attestation Services" />
-
-      <MobileStickyCTA
+<MobileStickyCTA
         title="Get attestation"
         whatsappMessage={`Hi, I'm interested in attestation: ${title}`}
       />

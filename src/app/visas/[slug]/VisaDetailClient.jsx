@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import RouterLink from "next/link";
 import { useParams } from "next/navigation";
 import MobileStickyCTA from '../../../components/MobileStickyCTA';
-import RelatedServices from '../../../components/RelatedServices';
 import {
   Box,
   Container,
@@ -404,9 +403,7 @@ const VisaDetail = ({ initialData = null, related = [] }) => {
         </Grid>
       </Container>
 
-      <RelatedServices items={related} type="visa" heading="Other Popular Visas" />
-
-      <MobileStickyCTA
+<MobileStickyCTA
         title="Apply for visa"
         whatsappMessage={`Hi, I'm interested in the visa: ${title}`}
       />

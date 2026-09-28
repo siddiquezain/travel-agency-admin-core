@@ -25,7 +25,6 @@ import {
 } from "lucide-react";
 import MarkdownContent from "../../../components/MarkdownContent";
 import MobileStickyCTA from "../../../components/MobileStickyCTA";
-import RelatedServices from "../../../components/RelatedServices";
 import { useRecaptcha } from "@/components/RecaptchaProvider";
 
 const PLAYFAIR = "[font-family:var(--font-playfair),Georgia,serif]";
@@ -504,14 +503,7 @@ export default function UmrahTourDetailClient({ initialData, related = [] }) {
         </div>
       </div>
 
-      <RelatedServices
-        items={related}
-        type="tour"
-        variant="umrah"
-        heading="More Umrah Packages"
-      />
-
-      <MobileStickyCTA
+<MobileStickyCTA
         title="Book this package"
         whatsappMessage={`Hi, I'm interested in the Umrah package: ${title}`}
       />
