@@ -137,11 +137,11 @@ export async function sendTestEmail(to: string): Promise<{ ok: boolean; error?: 
         await transporter.sendMail({
             from: config.from,
             to,
-            subject: "Origin Tours and Travels — SMTP test",
+            subject: "Travel Admin — Test Email",
             text:
-                "This is a test message from the Origin admin Settings page.\n\nIf you received it, your SMTP credentials are working.",
+                "This is a test message from the admin Settings page.\n\nIf you received it, your SMTP credentials are working.",
             html: `
-                <p>This is a test message from the <strong>Origin admin Settings</strong> page.</p>
+                <p>This is a test message from the <strong>admin Settings</strong> page.</p>
                 <p>If you received it, your SMTP credentials are working.</p>
             `.trim(),
         });
