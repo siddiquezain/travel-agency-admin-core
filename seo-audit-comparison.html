@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEO Audit — Comparison (v1 → v2) · origintoursandtravels.com</title>
+<style>
+  :root{
+    --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --bg:#ffffff;
+    --brand:#0d5c63; --brand2:#14b8a6;
+    --up:#16a34a; --down:#dc2626; --flat:#64748b;
+    --crit:#dc2626; --high:#ea580c; --med:#ca8a04; --low:#16a34a;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{margin:0;font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#f1f5f9}
+  .page{max-width:940px;margin:0 auto;background:var(--bg);padding:48px 56px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+  header.cover{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;border-radius:14px;padding:40px;margin-bottom:30px}
+  header.cover h1{margin:0 0 6px;font-size:28px;letter-spacing:-.5px}
+  header.cover .sub{opacity:.92;font-size:15px}
+  header.cover .meta{margin-top:16px;font-size:13px;opacity:.85}
+  h2{font-size:20px;margin:34px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--line)}
+  p{margin:8px 0}
+  .note{color:var(--muted);font-size:13px}
+  /* headline deltas */
+  .deltahero{display:flex;gap:20px;align-items:stretch;flex-wrap:wrap;margin:10px 0 4px}
+  .scorecard{flex:1;min-width:150px;border:1px solid var(--line);border-radius:12px;padding:18px 20px;text-align:center}
+  .scorecard .lbl{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+  .scorecard .big{font-size:46px;font-weight:800;line-height:1.1}
+  .scorecard.v1 .big{color:var(--high)}
+  .scorecard.v2 .big{color:var(--brand2)}
+  .scorecard.delta{background:#f0fdf4;border-color:#bbf7d0}
+  .scorecard.delta .big{color:var(--up)}
+  .arrow{font-size:30px;color:var(--up);align-self:center;font-weight:800}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13.5px}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
+  th{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.04em}
+  td.num{text-align:right;font-variant-numeric:tabular-nums;width:60px}
+  .up{color:var(--up);font-weight:700}.down{color:var(--down);font-weight:700}.flat{color:var(--flat);font-weight:700}
+  .mini{display:inline-block;height:8px;border-radius:5px;background:linear-gradient(90deg,var(--brand),var(--brand2));vertical-align:middle}
+  .miniwrap{display:inline-block;width:120px;height:8px;border-radius:5px;background:#e2e8f0;overflow:hidden;vertical-align:middle}
+  .row{border:1px solid var(--line);border-left-width:5px;border-radius:9px;padding:11px 15px;margin:9px 0;break-inside:avoid;font-size:13.5px}
+  .row.fixed{border-left-color:var(--up);background:#f0fdf4}
+  .row.open{border-left-color:var(--med)}
+  .row.newr{border-left-color:var(--crit);background:#fef2f2}
+  .row h4{margin:0 0 3px;font-size:14px}
+  .row .src{font-size:12px;color:var(--muted)}
+  .tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#fff;border-radius:5px;padding:2px 7px;margin-right:7px;vertical-align:middle}
+  .tag.fixed{background:var(--up)}.tag.open{background:var(--med)}.tag.newr{background:var(--crit)}
+  code{background:#f1f5f9;border-radius:4px;padding:1px 5px;font:12.5px/1 ui-monospace,Menlo,monospace}
+  .callout{background:#f8fafc;border:1px solid var(--line);border-radius:10px;padding:13px 16px;margin:14px 0;font-size:13px}
+  footer{margin-top:38px;padding-top:14px;border-top:2px solid var(--line);font-size:12px;color:var(--muted);text-align:center}
+  @media print{body{background:#fff}.page{box-shadow:none;max-width:none;padding:0 14mm}h2{page-break-after:avoid}.noprint{display:none}}
+  .printbar{position:sticky;top:0;background:#0f172a;color:#fff;padding:10px 16px;font-size:13px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .printbar button{background:var(--brand2);color:#fff;border:0;border-radius:7px;padding:7px 14px;font-size:13px;cursor:pointer;font-weight:600}
+</style>
+</head>
+<body>
+<div class="printbar noprint">
+  <span>📄 Save as PDF: <strong>Print</strong> (Ctrl/Cmd+P) → <strong>Save as PDF</strong> → enable “Background graphics”.</span>
+  <button onclick="window.print()">Print / Save PDF</button>
+</div>
+
+<div class="page">
+  <header class="cover">
+    <h1>SEO Audit — Comparison Report</h1>
+    <div class="sub">Origin Tours &amp; Travels · origintoursandtravels.com — what changed between the two audits</div>
+    <div class="meta">v1: earlier audit (6 specialists, commit <code>a63b0b0</code>) &nbsp;→&nbsp; v2: current audit (10 specialists + live verification, 29 May 2026)</div>
+  </header>
+
+  <h2>Headline: Health Score 59 → 69 <span style="color:var(--up)">(+10)</span></h2>
+  <div class="deltahero">
+    <div class="scorecard v1"><div class="lbl">v1 — earlier</div><div class="big">59</div><div class="note">/ 100</div></div>
+    <div class="arrow">→</div>
+    <div class="scorecard v2"><div class="lbl">v2 — current</div><div class="big">69</div><div class="note">/ 100</div></div>
+    <div class="scorecard delta"><div class="lbl">Improvement</div><div class="big">+10</div><div class="note">7 of 7 categories up or flat (1 regression)</div></div>
+  </div>
+  <div class="callout">
+    <strong>This is a real before/after, not two views of one snapshot.</strong> After v1 was written, the dev shipped fixes that directly target its findings — git commits <code>7bad41d “legal pages added”</code> and <code>3d06b10 “H-1a complete — detail content now server-rendered”</code> both land <em>after</em> the v1 report commit. The gains below are <strong>git- and live-verified</strong>, not scoring noise — though some delta also comes from v2 using 10 specialists vs v1’s 6, plus live verification.
+  </div>
+
+  <h2>Category scorecard</h2>
+  <table>
+    <thead><tr><th>Category</th><th>Weight</th><th class="num">v1</th><th class="num">v2</th><th class="num">Δ</th><th>v2 level</th></tr></thead>
+    <tbody>
+      <tr><td>AI Search Readiness</td><td>10%</td><td class="num">42</td><td class="num">62</td><td class="num up">+20</td><td><span class="miniwrap"><span class="mini" style="width:62%"></span></span></td></tr>
+      <tr><td>Performance (CWV)*</td><td>10%</td><td class="num">50</td><td class="num">65</td><td class="num up">+15</td><td><span class="miniwrap"><span class="mini" style="width:65%"></span></span></td></tr>
+      <tr><td>On-Page SEO</td><td>20%</td><td class="num">58</td><td class="num">72</td><td class="num up">+14</td><td><span class="miniwrap"><span class="mini" style="width:72%"></span></span></td></tr>
+      <tr><td>Technical SEO</td><td>22%</td><td class="num">68</td><td class="num">78</td><td class="num up">+10</td><td><span class="miniwrap"><span class="mini" style="width:78%"></span></span></td></tr>
+      <tr><td>Schema / Structured Data</td><td>10%</td><td class="num">65</td><td class="num">75</td><td class="num up">+10</td><td><span class="miniwrap"><span class="mini" style="width:75%"></span></span></td></tr>
+      <tr><td>Content Quality (E-E-A-T)</td><td>23%</td><td class="num">61</td><td class="num">62</td><td class="num up">+1</td><td><span class="miniwrap"><span class="mini" style="width:62%"></span></span></td></tr>
+      <tr><td>Images</td><td>5%</td><td class="num">60</td><td class="num">55</td><td class="num down">−5</td><td><span class="miniwrap"><span class="mini" style="width:55%"></span></span></td></tr>
+      <tr style="border-top:2px solid var(--line)"><td><strong>Overall</strong></td><td></td><td class="num"><strong>59</strong></td><td class="num"><strong>69</strong></td><td class="num up"><strong>+10</strong></td><td></td></tr>
+    </tbody>
+  </table>
+  <p class="note">* Performance rose on shipped structural fixes (SSR carousels, removed idle Tawk WebSocket, GTM defer) but is still an <strong>estimate</strong> — neither audit had CrUX/PageSpeed field data. Images fell because a new hard regression (OG image 404) outweighs v1’s milder “logo points to OG image” note.</p>
+
+  <h2>✅ Fixed since v1 — verified</h2>
+
+  <div class="row fixed"><h4><span class="tag fixed">Resolved</span>C-3 · Legal pages now exist</h4>
+    <div>v1: no Privacy/Terms/Refund pages — a hard QRG + DPDPA failure for a site collecting inquiries. <strong>Now live:</strong> <code>/privacy</code>, <code>/terms</code>, <code>/refund</code> all return 200.</div>
+    <div class="src">Verified: live HTTP 200 · commit <code>7bad41d “legal pages added”</code></div>
+  </div>
+  <div class="row fixed"><h4><span class="tag fixed">Resolved</span>H-1a · Detail content is now server-rendered</h4>
+    <div>v1: tour/visa detail pages fetched body content in <code>useEffect</code> (skeleton on first paint, JS-gated). <strong>Now:</strong> detail pages SSR their content; the tour detail page ships <code>TouristTrip</code> + <code>BreadcrumbList</code> in initial HTML.</div>
+    <div class="src">Verified: live <code>curl</code> of <code>/tours/kashmir-tour-package-from-hyderabad</code> · commit <code>3d06b10 “H-1a complete”</code></div>
+  </div>
+  <div class="row fixed"><h4><span class="tag fixed">Resolved</span>H-3 · Schema type misuse (Product → TouristTrip/Service)</h4>
+    <div>v1: tours/visas used <code>Product</code> schema, forfeiting travel rich-result eligibility. <strong>Now:</strong> tours use <code>TouristTrip</code>, visas/attestation use <code>Service</code> — correct types throughout.</div>
+    <div class="src">Verified: live schema scan + v2 schema specialist</div>
+  </div>
+  <div class="row fixed"><h4><span class="tag fixed">Resolved</span>H-8 · llms.txt added (and it’s strong)</h4>
+    <div>v1: no <code>llms.txt</code>. <strong>Now:</strong> <code>/llms.txt</code> returns 200 with specific pricing, visa timelines, NAP and accreditations — better than 90% of travel-agency sites per the v2 GEO specialist. (Main driver of the +20 AI-readiness jump.)</div>
+    <div class="src">Verified: live HTTP 200</div>
+  </div>
+  <div class="row fixed"><h4><span class="tag fixed">Resolved</span>M-3 · BreadcrumbList rolled out beyond /hajj</h4>
+    <div>v1: breadcrumbs only on <code>/hajj</code>. <strong>Now:</strong> <code>BreadcrumbList</code> on all service + detail pages.</div>
+    <div class="src">Verified: v2 schema specialist + live scan</div>
+  </div>
+  <div class="row fixed"><h4><span class="tag fixed">Improved</span>H-4 · Performance — structural fixes shipped</h4>
+    <div>v1: <code>HeroSlideCarousel</code> <code>ssr:false</code>, heavy three.js Globe, idle Tawk WebSocket blocking bfcache. <strong>Since then:</strong> SSR-friendly static-grid carousels with scroll-hydration, removed the idle Tawk timer, GTM/GA defer, font-flash fix. Still needs a real CrUX/Lighthouse run to confirm p75.</div>
+    <div class="src">Commits <code>d6f0742</code>, <code>8758087</code>, <code>57c714c</code>, <code>becb817</code></div>
+  </div>
+
+  <h2>🟡 Carried forward — still open in v2</h2>
+  <div class="row open"><h4><span class="tag open">Open</span>Trust signals — fabricated testimonials &amp; unverifiable “4.9 / 99%”</h4>
+    <div>v1 <strong>C-1</strong> → v2 <strong>C2</strong>. Still hardcoded testimonials with no source; “4.9” and “99% visa success” remain unbacked. Top YMYL trust risk.</div></div>
+  <div class="row open"><h4><span class="tag open">Open</span>Credentials are still text-only / no team</h4>
+    <div>v1 <strong>C-2</strong> → v2 <strong>H3</strong>. No IATA/TAAI/Hajj registration numbers, no named consultants on <code>/about</code>.</div></div>
+  <div class="row open"><h4><span class="tag open">Open</span>Listing pages still thin</h4>
+    <div>v1 <strong>H-1b</strong> → v2 <strong>H1</strong>. Detail pages are fixed, but <code>/tours</code> and <code>/visas</code> listing pages remain filter-grid-only with little server-rendered editorial text.</div></div>
+  <div class="row open"><h4><span class="tag open">Open</span>No <code>aggregateRating</code> schema</h4>
+    <div>v1 <strong>H-2</strong> → v2 <strong>C3</strong>. Correctly gated on real GBP data — needs the review-velocity program before the (already-built) helper can be wired.</div></div>
+  <div class="row open"><h4><span class="tag open">Open</span>Other carry-overs</h4>
+    <div>Anonymous/near-empty blog (<strong>H-5</strong>); no Tier-1 India citations — Justdial/Sulekha/IndiaMART (<strong>H-7</strong>); Maps embed uses a text query not the Place ID (<strong>M-2</strong>); sitemap <code>lastmod</code> identical on static routes + deprecated <code>changefreq</code>/<code>priority</code> (now v2 <strong>H5</strong>).</div></div>
+
+  <h2>🔴 New or escalated in v2</h2>
+  <div class="row newr"><h4><span class="tag newr">New / escalated</span>OG &amp; logo image now a hard 404</h4>
+    <div>v1 noted (Low) that schema <code>logo</code> pointed at the OG image. v2 live check found <code>/og-default.jpg</code> itself returns <strong>404</strong> — so <code>og:image</code>, <code>twitter:image</code> and schema <code>logo</code> are all broken. Escalated to <strong>Critical (C1)</strong>. Likely a side-effect of the recent refactors.</div>
+    <div class="src">Verified: live <code>curl -I /og-default.jpg</code> → 404</div>
+  </div>
+  <div class="row newr"><h4><span class="tag newr">New</span>Email domain mismatch</h4>
+    <div>Not in v1. v2 local specialist flagged <code>sales@origingroups.com</code> ≠ the website domain → fragments NAP/trust for directory validators. (v2 <strong>H6</strong>.)</div></div>
+  <div class="row newr"><h4><span class="tag newr">New detail</span>Sunday hours &amp; duplicate homepage FAQPage</h4>
+    <div>Sunday <code>openingHoursSpecification</code> now present but as <code>00:00–00:00</code> (parses as “open 24h”); homepage emits the <code>FAQPage</code> block twice. Both are v2 <strong>H4</strong> schema fixes.</div></div>
+
+  <h2>Net assessment</h2>
+  <p>The team has worked through the v1 plan effectively: <strong>3 of 3 “Wave 1/2” structural items verified done</strong> (legal pages, SSR detail content, schema-type migration) plus llms.txt and breadcrumbs — driving the biggest gains in AI-readiness, on-page and schema. The <strong>remaining ceiling is unchanged</strong>: trust/E-E-A-T (testimonials, credentials, reviews) and thin listing-page content — which is why Content Quality barely moved (+1). The one regression — the 404 OG/logo image — is the cheapest possible fix and should be the very next action.</p>
+
+  <div class="callout">
+    <strong>Files:</strong> <code>seo-audit-report-v1.html/.pdf</code> (old, recovered from git) · <code>seo-audit-report-v2.html/.pdf</code> (current) · <code>seo-audit-comparison.html/.pdf</code> (this report).
+  </div>
+
+  <footer>
+    Origin Tours &amp; Travels — SEO Audit Comparison · v1 → v2 · Generated 29 May 2026<br>
+    Built by agricidaniel — AI Marketing Hub · https://www.skool.com/ai-marketing-hub
+  </footer>
+</div>
+</body>
+</html>

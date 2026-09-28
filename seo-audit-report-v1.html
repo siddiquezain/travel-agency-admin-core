@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEO Audit — Origin Tours &amp; Travels</title>
+<style>
+  :root{
+    --primary:#1e3a5f; --secondary:#4a5568; --accent:#b8860b;
+    --success:#2d6a4f; --warning:#d4740e; --danger:#c53030;
+    --dark:#1a1a2e; --light:#faf9f7; --grid:#d6d3cc; --muted:#6b7280;
+  }
+  *{box-sizing:border-box;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+       color:#1a1a2e; line-height:1.55; margin:0; background:#f3f2ef;}
+  .page{max-width:900px; margin:0 auto; background:#fff; padding:48px 56px; box-shadow:0 2px 12px rgba(0,0,0,.08);}
+  header{border-bottom:4px solid var(--primary); padding-bottom:18px; margin-bottom:28px;}
+  header h1{color:var(--primary); margin:0 0 6px; font-size:26px;}
+  header .meta{color:var(--muted); font-size:13px;}
+  h2{color:var(--primary); border-left:5px solid var(--accent); padding-left:12px; margin-top:38px; font-size:20px;}
+  h3{color:var(--secondary); font-size:16px; margin-bottom:6px;}
+  table{border-collapse:collapse; width:100%; margin:14px 0; font-size:14px;}
+  th,td{border:1px solid var(--grid); padding:8px 10px; text-align:left; vertical-align:top;}
+  th{background:var(--primary); color:#fff; font-weight:600;}
+  tr:nth-child(even) td{background:var(--light);}
+  .score-hero{display:flex; align-items:center; gap:28px; background:var(--light);
+              border:1px solid var(--grid); border-radius:10px; padding:24px 28px; margin:8px 0 4px;}
+  .score-num{font-size:58px; font-weight:800; line-height:1;}
+  .score-label{font-size:13px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em;}
+  .verdict{font-size:14px; color:var(--secondary);}
+  .pill{display:inline-block; padding:2px 10px; border-radius:12px; font-size:12px; font-weight:700; color:#fff;}
+  .crit{background:var(--danger);} .high{background:var(--warning);} .med{background:var(--accent);} .low{background:var(--success);}
+  .finding{border:1px solid var(--grid); border-left:5px solid var(--grid); border-radius:6px;
+           padding:12px 16px; margin:12px 0; background:#fff;}
+  .finding.c{border-left-color:var(--danger);} .finding.h{border-left-color:var(--warning);}
+  .finding.m{border-left-color:var(--accent);} .finding.l{border-left-color:var(--success);}
+  .finding h4{margin:0 0 6px; font-size:15px; color:var(--dark);}
+  .finding p{margin:4px 0; font-size:13.5px;}
+  .finding .micro{font-size:12.5px; color:var(--muted);}
+  .wave{background:var(--light); border:1px solid var(--grid); border-radius:8px; padding:14px 18px; margin:12px 0;}
+  .wave h3{margin-top:0; color:var(--primary);}
+  ol,ul{font-size:14px;}
+  .note{background:#fff8e6; border:1px solid var(--accent); border-radius:6px; padding:12px 16px; font-size:13px; margin:14px 0;}
+  footer{margin-top:40px; padding-top:18px; border-top:2px solid var(--grid); font-size:12px; color:var(--muted); text-align:center;}
+  @media print{ body{background:#fff;} .page{box-shadow:none; max-width:none; padding:0 12px;} h2{page-break-after:avoid;} .finding,.wave{page-break-inside:avoid;} }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <h1>SEO Audit — Origin Tours &amp; Travels</h1>
+  <div class="meta">
+    https://origintoursandtravels.com &nbsp;·&nbsp; Local travel agency (Hyderabad, India) — Umrah/Hajj, tours, visas, attestation<br>
+    Audit date: 2026-05-29 &nbsp;·&nbsp; YMYL: Yes (money + safety) &nbsp;·&nbsp; Method: 6-specialist parallel audit (source + live fetch)
+  </div>
+</header>
+
+<h2>SEO Health Score</h2>
+<div class="score-hero">
+  <div>
+    <div class="score-num" style="color:var(--warning);">59</div>
+    <div class="score-label">out of 100</div>
+  </div>
+  <div class="verdict">
+    Solid technical/on-page foundation (canonicals, per-service pages, geo-modified metadata, valid
+    <code>TravelAgency</code>/<code>Organization</code>/<code>FAQPage</code> schema) undermined by three compounding problems:
+    <strong>unverifiable trust signals on a YMYL site</strong>, <strong>client-rendered / thin commercial content</strong>,
+    and <strong>structural gaps that suppress rich results and AI citation</strong>.
+  </div>
+</div>
+
+<table>
+  <tr><th>Category</th><th>Weight</th><th>Score</th><th>Weighted</th></tr>
+  <tr><td>Technical SEO</td><td>22%</td><td>68</td><td>14.96</td></tr>
+  <tr><td>Content Quality (E-E-A-T)</td><td>23%</td><td>61</td><td>14.03</td></tr>
+  <tr><td>On-Page SEO</td><td>20%</td><td>58</td><td>11.60</td></tr>
+  <tr><td>Schema / Structured Data</td><td>10%</td><td>65</td><td>6.50</td></tr>
+  <tr><td>Performance (CWV)</td><td>10%</td><td>50</td><td>5.00</td></tr>
+  <tr><td>AI Search Readiness</td><td>10%</td><td>42</td><td>4.20</td></tr>
+  <tr><td>Images</td><td>5%</td><td>60</td><td>3.00</td></tr>
+  <tr><td><strong>Total</strong></td><td></td><td></td><td><strong>≈ 59</strong></td></tr>
+</table>
+
+<div class="note">
+  <strong>Reconciliation note:</strong> The GEO crawl reported "no structured data" — a false negative from live-HTML
+  markdown stripping. Source review confirms JSON-LD <em>does exist</em> (<code>layout.tsx</code>, <code>hajj/page.jsx</code>).
+  The real schema problems are <em>quality</em> gaps (wrong types, missing <code>aggregateRating</code>, partial breadcrumbs), not absence.
+</div>
+
+<h2>Critical Findings <span class="pill crit">Fix now</span></h2>
+
+<div class="finding c">
+  <h4>C-1 · Hardcoded, unverifiable testimonials + "10K+ / 4.9★ / 99% success" claims</h4>
+  <p>All 22 reviews are static JSX (no dates, profile links, or platform attribution); headline stats have no methodology. On a YMYL site handling ₹85k–₹5L transactions, unverifiable social proof is the strongest negative trust signal under the Sept 2025 QRG.</p>
+  <p class="micro"><strong>Falsify:</strong> open the GBP listing (CID <code>0x94ba7b774d9ffdb9</code>) — if Google shows &lt;50 reviews, the "10K+" claim is a credibility gap. <strong>Monitor:</strong> weekly Google review count (target ≥3/week).</p>
+</div>
+<div class="finding c">
+  <h4>C-2 · IATA / TAAI / Hajj-operator credentials are text-only</h4>
+  <p>No badge images, membership numbers, or link to the IATA public agency directory — for the exact credentials that justify the purchase.</p>
+  <p class="micro"><strong>Falsify:</strong> no official-issuer <code>&lt;img&gt;</code> or verification <code>&lt;a&gt;</code> on <code>/about</code>. <strong>Monitor:</strong> "Accreditation" attribute appearing in the brand Knowledge Panel.</p>
+</div>
+<div class="finding c">
+  <h4>C-3 · No legal pages (Privacy / Terms / Cancellation-Refund)</h4>
+  <p>The site collects names, phones, emails and financial inquiries via <code>/api/inquiries</code> with no policy pages — a hard QRG failure and a DPDPA compliance gap in India.</p>
+  <p class="micro"><strong>Fix:</strong> create the three pages, link in footer. Binary check.</p>
+</div>
+
+<h2>High Findings <span class="pill high">~1 week / this sprint</span></h2>
+
+<div class="finding h">
+  <h4>H-1 · Commercial content is client-rendered / thin</h4>
+  <p>Tour &amp; visa <em>detail</em> pages fetch body content in <code>useEffect</code> (skeleton on first paint); <em>listing</em> pages are filter grids whose only crawlable prose is a collapsed FAQ (&lt;100 words). Filter state (<code>?country=Dubai</code>) isn't a crawlable URL, and there are no per-country / per-destination hub pages.</p>
+  <p class="micro"><strong>Falsify:</strong> <code>curl -A Googlebot /visas</code> — if pricing isn't in the HTML, content is JS-gated. <strong>Monitor:</strong> GSC "Crawled/Discovered – currently not indexed" for <code>/tours/*</code>, <code>/visas/*</code>.</p>
+</div>
+<div class="finding h"><h4>H-2 · No <code>aggregateRating</code> schema anywhere</h4><p>No star ratings in local pack or organic snippets (a 15–25% CTR handicap at equal rank). Depends on C-1 (need real review data first).</p></div>
+<div class="finding h"><h4>H-3 · Schema type misuse: <code>Product</code> on tours &amp; visas</h4><p>Should be <code>TouristTrip</code> (tours) and <code>Service</code>/<code>GovernmentService</code> (visa/attestation). <code>Product</code> forfeits travel-rich-result eligibility.</p></div>
+<div class="finding h">
+  <h4>H-4 · Performance — LCP &amp; TBT likely failing on mobile</h4>
+  <p><code>HeroSlideCarousel</code> is <code>dynamic(…, {ssr:false})</code> (hero absent from SSR → est. LCP 3.5–5.5s); the <code>cobe</code>/three.js Globe (28k mapSamples, main-thread WebGL) drives est. TBT 400–900ms / INP 200–400ms. R3F/drei (~200KB) may bleed into public chunks.</p>
+  <p class="micro"><strong>Highest-ROI single change:</strong> remove <code>ssr:false</code> on <code>HeroSlideCarousel</code> (Swiper 11 is SSR-safe). <strong>Monitor:</strong> CrUX p75 LCP/INP; Lighthouse LCP-element + TBT in CI.</p>
+</div>
+<div class="finding h"><h4>H-5 · Anonymous blog authorship + near-empty blog</h4><p><code>authorId</code> is nullable, falls back to site name; the live blog has one post with body "Hello" — yet sits at sitemap priority 0.9. YMYL blog content needs a credentialed human author.</p></div>
+<div class="finding h"><h4>H-6 · <code>/attestations</code> page-type mismatch (lowest SXO score, 33/100)</h4><p>A compliance/process query served as a card grid. The correct HRD→MEA→Embassy→MOFA process + per-document timelines exist only inside a collapsed FAQ.</p></div>
+<div class="finding h"><h4>H-7 · No Tier-1 India citations</h4><p>No JustDial, Sulekha, IndiaMART, or TripAdvisor presence; the GBP URL isn't in <code>sameAs</code>. Table stakes for Hyderabad local search.</p></div>
+<div class="finding h"><h4>H-8 · <code>llms.txt</code> absent</h4><p>Zero-code static file; the cheapest AI-visibility win (Perplexity especially).</p></div>
+
+<h2>Medium Findings <span class="pill med">within a month</span></h2>
+<ul>
+  <li><strong>M-1</strong> Stock Unsplash "team" headshots — rater-detectable; replace with real staff.</li>
+  <li><strong>M-2</strong> Maps embed uses a text <em>query</em> not the Place ID (fragile; CID already in code).</li>
+  <li><strong>M-3</strong> <code>BreadcrumbList</code> only on <code>/hajj</code> — replicate to umrah/visas/attestations/tours (30-min win).</li>
+  <li><strong>M-4</strong> No <code>LocalBusiness</code>/<code>TravelAgency</code> JSON-LD on <code>/contact</code> (most NAP-dense page) — add with <code>hasMap</code>, hours, <code>aggregateRating</code>.</li>
+  <li><strong>M-5</strong> Geo precision 3–4 decimals (~100m error) → use 5 (<code>17.39489, 78.45882</code>); add <code>Sunday: Closed</code>.</li>
+  <li><strong>M-6</strong> City-intent only in (ignored) <code>keywords</code> meta, not in H1/H2 — put "in/from Hyderabad" into visible headings.</li>
+  <li><strong>M-7</strong> Umrah page: duplicate FAQ + duplicate gallery images + stale "RT-PCR required?" FAQ; no Economy/Standard/Premium comparison table.</li>
+  <li><strong>M-8</strong> FAQ answers too short for AI citation (18–40 words; target 134–167) — expand strongest ones.</li>
+  <li><strong>M-9</strong> No contextual cross-service internal links (attestation↔visa, umrah↔hajj↔air-ticketing).</li>
+  <li><strong>M-10</strong> Unsubstantiated "99% / 10K+" — add date-qualified, methodology-backed versions.</li>
+</ul>
+
+<h2>Low Findings <span class="pill low">backlog</span></h2>
+<ul>
+  <li>Phone format inconsistent across schema / text / <code>tel:</code> — normalize to E.164 + one human format.</li>
+  <li><code>logo</code> in schema points to the 1200×630 OG image — needs a square ≥112px logo (suppresses Knowledge Panel logo).</li>
+  <li>Sitemap: all <code>lastmod</code> identical (build time), detail/blog URLs absent, <code>/contact</code> priority 0.5 — drive <code>lastmod</code> from Prisma <code>updatedAt</code> and add detail URLs.</li>
+  <li>Global <code>authors</code> metadata = brand name (compounds H-5).</li>
+  <li>"Humayun Nagar Rd" vs "Road" street-name inconsistency.</li>
+</ul>
+
+<h2>Prioritized Action Plan (dependency-sequenced)</h2>
+<div class="wave">
+  <h3>Wave 1 — This week (trust + quick wins, mostly no-code/content)</h3>
+  <ol>
+    <li>Create Privacy / Terms / Cancellation pages + footer links <em>(C-3)</em>.</li>
+    <li>Add verifiable IATA/TAAI numbers + official badges + directory link on <code>/about</code> <em>(C-2)</em>.</li>
+    <li>Add "Review us on Google" CTA (footer, <code>/contact</code>, post-inquiry email) → starts review velocity, unblocks C-1/H-2 <em>(C-1)</em>.</li>
+    <li>Publish <code>/llms.txt</code> <em>(H-8)</em>; add <code>BreadcrumbList</code> to four service pages <em>(M-3)</em>; replace RT-PCR FAQ + de-dupe Umrah FAQ/gallery <em>(M-7)</em>.</li>
+  </ol>
+</div>
+<div class="wave">
+  <h3>Wave 2 — Sprint (code, high ROI)</h3>
+  <ol start="5">
+    <li>Remove <code>ssr:false</code> on <code>HeroSlideCarousel</code>; lazy-load Globe behind IntersectionObserver + drop mapSamples; verify R3F not in public chunks <em>(H-4)</em>.</li>
+    <li>SSR-pass tour/visa body content from the server component instead of <code>useEffect</code> <em>(H-1a)</em>.</li>
+    <li>Migrate <code>Product</code> → <code>TouristTrip</code>/<code>Service</code>; add <code>aggregateRating</code> (real GBP data) + <code>/contact</code> LocalBusiness JSON-LD <em>(H-3, H-2, M-4)</em>.</li>
+    <li>Restructure <code>/attestations</code> with a static process block above the grid <em>(H-6)</em>.</li>
+  </ol>
+</div>
+<div class="wave">
+  <h3>Wave 3 — This month (architecture + authority)</h3>
+  <ol start="9">
+    <li>Build crawlable hub pages: <code>/visas/dubai</code>, <code>/visas/schengen</code>, <code>/tours/kerala-packages</code>… with real checklists/itineraries + cross-service links <em>(H-1b, M-9)</em>.</li>
+    <li>Claim/complete GBP (categories, photos, services, Q&amp;A); build JustDial/Sulekha/IndiaMART/TripAdvisor citations, add all to <code>sameAs</code> <em>(H-7)</em>.</li>
+    <li>Populate blog with credentialed-author YMYL articles; add author bios; fix authorId fallback <em>(H-5)</em>.</li>
+  </ol>
+</div>
+
+<h2>Limitations</h2>
+<p style="font-size:13px;">No live PageSpeed/CrUX, GSC, or GBP-API data was available (Bash/API access was sandboxed for subagents), so CWV figures are <strong>code-based estimates</strong>, SERP/SXO reconstructions are <strong>knowledge-based</strong>, and live review counts / citation status need verification. Validate Wave-2 performance claims with a real Lighthouse/CrUX run and confirm the GBP review gap before publishing any <code>aggregateRating</code>.</p>
+
+<footer>
+  Built by agricidaniel — Join the AI Marketing Hub community<br>
+  Free → https://www.skool.com/ai-marketing-hub &nbsp;·&nbsp; Pro → https://www.skool.com/ai-marketing-hub-pro
+</footer>
+
+</div>
+</body>
+</html>

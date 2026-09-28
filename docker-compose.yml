@@ -1,0 +1,90 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: origin-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-root}
+      POSTGRES_DB: origin_travels
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  migrate:
+    build:
+      context: .
+      target: builder
+    container_name: origin-migrate
+    environment:
+      DATABASE_URL: postgresql://postgres:${POSTGRES_PASSWORD:-root}@origin-db:5432/origin_travels?schema=public
+    command: >-
+      sh -c "
+        set -e;
+        echo '=== Migrate: checking DATABASE_URL ===';
+        echo \"URL: $${DATABASE_URL}\" | head -c 60;
+        echo '';
+        echo '=== Running prisma db push ===';
+        ./node_modules/.bin/prisma db push;
+        echo '=== DB push done ===';
+      "
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: "no"
+
+  # On-demand seeding only. NOT part of the default `docker compose up` flow,
+  # so restarts never re-create admin-deleted content. Run explicitly with:
+  #   docker compose run --rm seed
+  seed:
+    profiles: ["seed"]
+    build:
+      context: .
+      target: builder
+    container_name: origin-seed
+    environment:
+      DATABASE_URL: postgresql://postgres:${POSTGRES_PASSWORD:-root}@origin-db:5432/origin_travels?schema=public
+    command: ["./node_modules/.bin/tsx", "prisma/seed.ts"]
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: "no"
+
+  app:
+    build:
+      context: .
+      target: runner
+    container_name: origin-app
+    restart: unless-stopped
+    ports:
+      - "3010:3000"
+    volumes:
+      - uploads_data:/app/uploads
+    environment:
+      DATABASE_URL: postgresql://postgres:${POSTGRES_PASSWORD:-root}@origin-db:5432/origin_travels?schema=public
+      NEXTAUTH_URL: ${NEXTAUTH_URL:-http://localhost:3010}
+      NEXTAUTH_SECRET: ${NEXTAUTH_SECRET:-change-me-in-production}
+      SMTP_HOST: ${SMTP_HOST:-}
+      SMTP_PORT: ${SMTP_PORT:-587}
+      SMTP_SECURE: ${SMTP_SECURE:-false}
+      SMTP_USER: ${SMTP_USER:-}
+      SMTP_PASS: ${SMTP_PASS:-}
+      INQUIRY_FROM: ${INQUIRY_FROM:-}
+      INQUIRY_TO: ${INQUIRY_TO:-}
+      RECAPTCHA_SITE_KEY: ${RECAPTCHA_SITE_KEY:-}
+      RECAPTCHA_SECRET_KEY: ${RECAPTCHA_SECRET_KEY:-}
+    depends_on:
+      db:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+
+volumes:
+  postgres_data:
+  uploads_data:

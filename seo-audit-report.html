@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEO Audit — origintoursandtravels.com</title>
+<style>
+  :root{
+    --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --bg:#ffffff;
+    --brand:#0d5c63; --brand2:#14b8a6;
+    --crit:#dc2626; --high:#ea580c; --med:#ca8a04; --low:#16a34a; --info:#2563eb;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{margin:0;font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#f1f5f9}
+  .page{max-width:920px;margin:0 auto;background:var(--bg);padding:48px 56px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+  header.cover{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;border-radius:14px;padding:40px;margin-bottom:36px}
+  header.cover h1{margin:0 0 6px;font-size:30px;letter-spacing:-.5px}
+  header.cover .sub{opacity:.92;font-size:16px}
+  header.cover .meta{margin-top:18px;font-size:13px;opacity:.85}
+  h2{font-size:21px;margin:38px 0 14px;padding-bottom:8px;border-bottom:2px solid var(--line);letter-spacing:-.3px}
+  h3{font-size:16px;margin:22px 0 8px}
+  p{margin:8px 0}
+  .lead{color:var(--muted)}
+  .scorewrap{display:flex;gap:28px;align-items:center;flex-wrap:wrap;margin:8px 0 18px}
+  .gauge{flex:0 0 auto}
+  .scoretext{flex:1;min-width:240px}
+  .scoretext .verdict{font-size:18px;font-weight:600}
+  .scoretext .note{color:var(--muted);font-size:13.5px}
+  table.cats{width:100%;border-collapse:collapse;margin:14px 0}
+  table.cats th,table.cats td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);font-size:14px}
+  table.cats th{color:var(--muted);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+  .barcell{width:46%}
+  .bar{height:10px;border-radius:6px;background:#e2e8f0;overflow:hidden}
+  .bar > span{display:block;height:100%;border-radius:6px;background:linear-gradient(90deg,var(--brand),var(--brand2))}
+  .scoreval{font-weight:700;width:48px}
+  .finding{border:1px solid var(--line);border-left-width:5px;border-radius:10px;padding:14px 16px;margin:12px 0;break-inside:avoid}
+  .finding.crit{border-left-color:var(--crit)}
+  .finding.high{border-left-color:var(--high)}
+  .finding.med{border-left-color:var(--med)}
+  .finding.low{border-left-color:var(--low)}
+  .finding h4{margin:0 0 6px;font-size:15px}
+  .finding .body{font-size:13.5px;color:#1e293b}
+  .finding .meta{font-size:12px;color:var(--muted);margin-top:7px;border-top:1px dashed var(--line);padding-top:7px}
+  .tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#fff;border-radius:5px;padding:2px 7px;vertical-align:middle;margin-right:8px}
+  .tag.crit{background:var(--crit)} .tag.high{background:var(--high)} .tag.med{background:var(--med)} .tag.low{background:var(--low)} .tag.info{background:var(--info)}
+  code{background:#f1f5f9;border-radius:4px;padding:1px 5px;font:13px/1 ui-monospace,SFMono-Regular,Menlo,monospace}
+  ul{margin:8px 0 8px 4px;padding-left:20px}
+  li{margin:4px 0}
+  .callout{background:#f8fafc;border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;font-size:13.5px}
+  .callout.warn{background:#fff7ed;border-color:#fed7aa}
+  .callout.good{background:#f0fdfa;border-color:#99f6e4}
+  .pill{font-size:12.5px;background:#f1f5f9;border:1px solid var(--line);border-radius:999px;padding:3px 10px;display:inline-block;margin:2px}
+  footer{margin-top:40px;padding-top:16px;border-top:2px solid var(--line);font-size:12px;color:var(--muted);text-align:center}
+  .seq{font-size:13.5px}
+  @media print{
+    body{background:#fff}
+    .page{box-shadow:none;max-width:none;padding:0 14mm}
+    h2{page-break-after:avoid}
+    .noprint{display:none}
+  }
+  .printbar{position:sticky;top:0;background:#0f172a;color:#fff;padding:10px 16px;font-size:13px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .printbar button{background:var(--brand2);color:#fff;border:0;border-radius:7px;padding:7px 14px;font-size:13px;cursor:pointer;font-weight:600}
+</style>
+</head>
+<body>
+<div class="printbar noprint">
+  <span>📄 To save as PDF: <strong>Print</strong> (Ctrl/Cmd+P) → Destination <strong>Save as PDF</strong> → enable “Background graphics”.</span>
+  <button onclick="window.print()">Print / Save PDF</button>
+</div>
+
+<div class="page">
+  <header class="cover">
+    <h1>SEO Audit Report</h1>
+    <div class="sub">Origin Tours &amp; Travels — Hyderabad travel agency (Umrah/Hajj, holidays, visas, attestation)</div>
+    <div class="meta">Site: origintoursandtravels.com &nbsp;·&nbsp; Audit date: 29 May 2026 &nbsp;·&nbsp; Method: 10 parallel specialists + live verification</div>
+  </header>
+
+  <h2>Overall SEO Health Score</h2>
+  <div class="scorewrap">
+    <div class="gauge">
+      <svg width="180" height="180" viewBox="0 0 180 180" role="img" aria-label="Score 69 of 100">
+        <circle cx="90" cy="90" r="74" fill="none" stroke="#e2e8f0" stroke-width="16"/>
+        <circle cx="90" cy="90" r="74" fill="none" stroke="#14b8a6" stroke-width="16"
+                stroke-linecap="round" stroke-dasharray="464.96" stroke-dashoffset="144.14"
+                transform="rotate(-90 90 90)"/>
+        <text x="90" y="86" text-anchor="middle" font-size="44" font-weight="700" fill="#0f172a">69</text>
+        <text x="90" y="112" text-anchor="middle" font-size="14" fill="#475569">/ 100</text>
+      </svg>
+    </div>
+    <div class="scoretext">
+      <div class="verdict">Good foundation — content depth &amp; trust signals are the ceiling.</div>
+      <p class="note">The site is technically ahead of most Indian travel-agency sites: clean server-side rendering, a valid dynamic sitemap/robots, strong security headers, correct <code>TravelAgency</code>/<code>TouristTrip</code> schema, and a genuinely good <code>llms.txt</code>. The score is held back by thin listing-page content, unverifiable trust claims, and a broken share/logo image.</p>
+    </div>
+  </div>
+
+  <table class="cats">
+    <thead><tr><th>Category</th><th>Weight</th><th class="barcell">Score</th><th></th></tr></thead>
+    <tbody>
+      <tr><td>Content Quality</td><td>23%</td><td class="barcell"><div class="bar"><span style="width:62%"></span></div></td><td class="scoreval">62</td></tr>
+      <tr><td>Technical SEO</td><td>22%</td><td class="barcell"><div class="bar"><span style="width:78%"></span></div></td><td class="scoreval">78</td></tr>
+      <tr><td>On-Page SEO</td><td>20%</td><td class="barcell"><div class="bar"><span style="width:72%"></span></div></td><td class="scoreval">72</td></tr>
+      <tr><td>Schema / Structured Data</td><td>10%</td><td class="barcell"><div class="bar"><span style="width:75%"></span></div></td><td class="scoreval">75</td></tr>
+      <tr><td>Performance (CWV)*</td><td>10%</td><td class="barcell"><div class="bar"><span style="width:65%"></span></div></td><td class="scoreval">65</td></tr>
+      <tr><td>AI Search Readiness</td><td>10%</td><td class="barcell"><div class="bar"><span style="width:62%"></span></div></td><td class="scoreval">62</td></tr>
+      <tr><td>Images</td><td>5%</td><td class="barcell"><div class="bar"><span style="width:55%"></span></div></td><td class="scoreval">55</td></tr>
+    </tbody>
+  </table>
+  <p class="note">* Performance is an <strong>estimate</strong> — no CrUX/PageSpeed key was available, so no field data was measured. Backlinks were also basic-tier only (no Moz/Bing key).</p>
+
+  <div class="callout warn">
+    <strong>Verified against the live site.</strong> Several specialists analysed the local codebase, which is <em>behind production</em>. These stale/incorrect findings were corrected and should <strong>not</strong> be actioned:
+    <ul>
+      <li><strong>“Homepage has no H1”</strong> — false; the live homepage has one keyword-rich H1.</li>
+      <li><strong>“/about is full client-side render”</strong> — false; <code>/about</code> is server-rendered in production.</li>
+      <li><strong>“/visas shows the attestation H1”</strong> — false positive; live H1 is correct.</li>
+      <li><strong>“4 service pages missing from sitemap”</strong> — stale; production <code>sitemap.xml</code> already includes <code>/hajj</code>, <code>/air-ticketing</code>, <code>/hotel-booking</code>, <code>/transport</code>.</li>
+      <li><strong>“Add HowTo schema”</strong> — rejected: HowTo rich results were deprecated (Sept 2023).</li>
+      <li><strong>FAQPage</strong> won’t earn Google rich results for a commercial site (Aug 2023 restriction) — do it for <em>LLM/AI citation</em>, not Google snippets.</li>
+    </ul>
+  </div>
+
+  <h2>🔴 Critical — fix immediately</h2>
+
+  <div class="finding crit">
+    <h4><span class="tag crit">Critical</span>C1 · OG / logo image returns 404 sitewide</h4>
+    <div class="body">
+      <code>/og-default.jpg</code> returns <strong>HTTP 404</strong>, yet it is referenced by <code>og:image</code>, <code>twitter:image</code>, and the schema <code>Organization</code>/<code>TravelAgency</code> <code>logo</code>. Every social share, WhatsApp preview and AI link card renders imageless, and the Knowledge Panel logo is broken.
+      <br><strong>Fix:</strong> add a real 1200×630 <code>og-default.jpg</code> to <code>/public</code>, plus a separate square logo for schema <code>logo</code> as an <code>ImageObject</code>.
+    </div>
+    <div class="meta"><strong>Why it ranks here:</strong> a referenced asset 404s, degrading every external preview surface. &nbsp;|&nbsp; <strong>Failure check:</strong> <code>curl -I /og-default.jpg</code> ≠ 200. &nbsp;|&nbsp; <strong>Leading indicator:</strong> link previews show an image in WhatsApp/X.</div>
+  </div>
+
+  <div class="finding crit">
+    <h4><span class="tag crit">Critical</span>C2 · Fabricated testimonials &amp; unverifiable stats (YMYL trust)</h4>
+    <div class="body">
+      13–22 hardcoded testimonials (initials only, no dates/source) plus a visible “4.9 rating” and “99% visa success rate” with no backing. For pilgrimage/visa (financial-decision) content, the Sept 2025 Quality Rater Guidelines treat this as deceptive.
+      <br><strong>Fix:</strong> replace with real Google Business Profile reviews (Places API or embed); add a methodology footnote to — or remove — the 99% claim.
+    </div>
+    <div class="meta"><strong>Flagged by:</strong> content + local + SXO. &nbsp;|&nbsp; <strong>Failure check:</strong> any on-page rating still lacks a verifiable source.</div>
+  </div>
+
+  <div class="finding crit">
+    <h4><span class="tag crit">Critical</span>C3 · Verify GBP primary category &amp; start review velocity</h4>
+    <div class="body">
+      GBP exists (CID confirmed in schema). Primary category is the single highest local-ranking factor and can’t be read from code.
+      <br><strong>Fix:</strong> confirm primary = “Travel Agency”; add “Tour Operator” and “Visa &amp; Passport Service” secondaries. Launch a WhatsApp post-service review request (≥1 new review/week to beat the ~18-day decay cliff). Then wire the <em>already-built</em> <code>aggregateRatingJsonLd()</code> helper with real data.
+    </div>
+    <div class="meta"><strong>Unblocks:</strong> AggregateRating rich snippet (depends on real review data). &nbsp;|&nbsp; <strong>Leading indicator:</strong> net-new Google reviews &gt; 0 / month.</div>
+  </div>
+
+  <h2>🟠 High — within 1 week</h2>
+
+  <div class="finding high">
+    <h4><span class="tag high">High</span>H1 · Thin listing pages can’t rank for high-volume terms</h4>
+    <div class="body"><code>/tours</code> and <code>/visas</code> are ~200–350 words of filter chrome + a card grid. Add a <strong>server-rendered</strong> 250–400-word editorial block, plus a 140–160-word question-led answer section (e.g. “How much do holiday packages from Hyderabad cost?”) <em>above</em> the grid. Must sit in the server component, not inside <code>*Client.jsx</code>.</div>
+    <div class="meta"><strong>Agreement:</strong> content + SXO + GEO — the biggest ranking ceiling on the site.</div>
+  </div>
+
+  <div class="finding high">
+    <h4><span class="tag high">High</span>H2 · Rebuild <code>/hajj</code> as an informational-hybrid guide</h4>
+    <div class="body">Hajj 2026 SERPs reward guides (govt vs private quota, cost-by-category, documents checklist), not a service pitch. Add <code>FAQPage</code> JSON-LD (for LLM citation) and a <code>TouristTrip</code> with itinerary.</div>
+    <div class="meta"><strong>Flagged by:</strong> SXO — highest-potential keyword where structure alone could move ranking 10+ places.</div>
+  </div>
+
+  <div class="finding high">
+    <h4><span class="tag high">High</span>H3 · Add verifiable credentials + a named team to <code>/about</code></h4>
+    <div class="body">Add IATA agent code, TAAI membership number, Hajj-operator registration number, and 3–4 named consultants with roles/experience. Single biggest E-E-A-T lever.</div>
+    <div class="meta"><strong>Flagged by:</strong> content + SXO. &nbsp;|&nbsp; <strong>Strengthens:</strong> H1/H2 content rewrites.</div>
+  </div>
+
+  <div class="finding high">
+    <h4><span class="tag high">High</span>H4 · Schema correctness fixes (<code>src/app/layout.tsx</code>)</h4>
+    <div class="body">
+      <ul>
+        <li><code>sameAs</code> URLs are missing the <code>https://www.</code> scheme → breaks entity reconciliation / Knowledge Panel.</li>
+        <li>Sunday <code>openingHoursSpecification</code> of <code>00:00–00:00</code> parses as “open 24h” → remove the Sunday entry.</li>
+        <li>Duplicate <code>FAQPage</code> on the homepage (FAQSection + FaqAccordion both emit) → keep one.</li>
+        <li><code>logo</code> should become an <code>ImageObject</code> (after C1).</li>
+      </ul>
+    </div>
+    <div class="meta"><strong>Flagged by:</strong> schema + GEO.</div>
+  </div>
+
+  <div class="finding high">
+    <h4><span class="tag high">High</span>H5 · Sitemap hygiene (<code>src/app/sitemap.ts</code>)</h4>
+    <div class="body">Static routes use <code>lastModified: now</code>, so every URL looks “just updated” on every crawl — Google then distrusts <code>lastmod</code> sitewide. Use real per-route dates; drop <code>changefreq</code> and <code>priority</code> (Google ignores both). Dynamic routes already use real <code>updatedAt</code> — leave them.</div>
+    <div class="meta"><strong>Flagged by:</strong> sitemap.</div>
+  </div>
+
+  <div class="finding high">
+    <h4><span class="tag high">High</span>H6 · Migrate email to the matching domain</h4>
+    <div class="body"><code>sales@origingroups.com</code> ≠ your website domain → fragments NAP/trust for directory validators. Move to <code>sales@origintoursandtravels.com</code> across site, schema, GBP and citations.</div>
+    <div class="meta"><strong>Flagged by:</strong> local.</div>
+  </div>
+
+  <h2>🟡 Medium — within 1 month</h2>
+  <div class="finding med">
+    <h4><span class="tag med">Medium</span>Conversion content on service pages</h4>
+    <div class="body"><code>/umrah</code>: pricing tier table (Economy/Standard/Premium + Haram distance) and next 3 group departure dates. <code>/attestations</code>: per-document fee ranges + explicit “Express: 3–5 days” SLA. <em>(SXO)</em></div>
+  </div>
+  <div class="finding med">
+    <h4><span class="tag med">Medium</span>Schema additions</h4>
+    <div class="body">Add <code>ContactPage</code> + <code>AboutPage</code> nodes, <code>foundingDate: "2010"</code>, and <code>TouristTrip.duration</code>. <em>(schema)</em></div>
+  </div>
+  <div class="finding med">
+    <h4><span class="tag med">Medium</span>Start a blog / guides hub</h4>
+    <div class="body">Priority articles: “Umrah from Hyderabad 2026 guide”, “Govt vs private Hajj packages”, “Schengen documents checklist”, “Attestation vs apostille”. Each internally links to the transactional pages and builds topical authority. <em>(SXO, GEO)</em></div>
+  </div>
+  <div class="finding med">
+    <h4><span class="tag med">Medium</span>Build core local citations</h4>
+    <div class="body">Exact-NAP listings on Justdial, Sulekha, IndiaMart, IATA Agent Finder, TAAI directory, TripAdvisor. <em>(local, backlinks)</em></div>
+  </div>
+  <div class="finding med">
+    <h4><span class="tag med">Medium</span>AI-crawler &amp; llms.txt enhancements</h4>
+    <div class="body">Add explicit <code>robots.txt</code> allow-rules for GPTBot / ClaudeBot / PerplexityBot / Google-Extended and an <code>X-Robots-Tag: max-snippet:-1, max-image-preview:large</code> header. Extend the (already strong) <code>llms.txt</code> with Blog, Topics, License, Last-Updated. <em>(GEO)</em></div>
+  </div>
+  <div class="finding med">
+    <h4><span class="tag med">Medium</span>Fix <code>/umrah</code> gallery</h4>
+    <div class="body">Descriptive alt text (“Pilgrims performing tawaf at Masjid al-Haram”) and remove the duplicated gallery image. <em>(SXO, images)</em></div>
+  </div>
+
+  <h2>🟢 Low — backlog</h2>
+  <ul>
+    <li>Add a <code>Content-Security-Policy</code> header; suppress <code>x-powered-by: Next.js</code>. <em>(technical)</em></li>
+    <li>Add LinkedIn to <code>sameAs</code> and create a <strong>Wikidata</strong> entity (founded 2010, Hyderabad, IATA) — an entity anchor for ChatGPT/Perplexity. <em>(GEO)</em></li>
+    <li>Measure CWV with real data: add a <code>GOOGLE_API_KEY</code> and re-run <code>/seo google</code> (field) or <code>/seo technical</code> (Lighthouse). The animated Globe (three.js) + Framer Motion are mobile LCP/INP risks. <em>(performance)</em></li>
+  </ul>
+
+  <h2>Dependency sequencing</h2>
+  <p class="seq">
+    <strong>Do first (cheapest, code-only, no content):</strong> C1 (image asset, minutes) → unblocks H4’s <code>logo</code> ImageObject; H4 + H5 are pure code edits.<br>
+    <strong>Then:</strong> C3 (real GBP reviews) → unblocks wiring the existing <code>aggregateRatingJsonLd()</code> helper in <code>src/lib/service-jsonld.ts</code>.<br>
+    <strong>Then content:</strong> H3 (credentials) strengthens H1 (tours/visas rewrite) and H2 (hajj guide).
+  </p>
+
+  <div class="callout good">
+    <strong>Strengths worth keeping:</strong> clean SSR across homepage / about / tour-detail; correct <code>TravelAgency</code> + <code>TouristTrip</code> + <code>BreadcrumbList</code> schema; valid dynamic <code>sitemap.xml</code> + <code>robots.txt</code>; HSTS-preload and a full set of security headers; a genuinely strong <code>llms.txt</code>; and excellent certificate-attestation process content.
+  </div>
+
+  <h2>Audit coverage</h2>
+  <div>
+    <span class="pill">✅ Technical</span><span class="pill">✅ Content / E-E-A-T</span><span class="pill">✅ Schema</span>
+    <span class="pill">✅ Sitemap</span><span class="pill">✅ Local SEO</span><span class="pill">✅ GEO / AI search</span>
+    <span class="pill">✅ SXO</span><span class="pill">⚠️ Performance (estimated)</span><span class="pill">⚠️ Backlinks (basic tier)</span>
+    <span class="pill">⏭ Google APIs (no key)</span><span class="pill">⏭ Maps (no DataForSEO)</span>
+  </div>
+
+  <footer>
+    Origin Tours &amp; Travels — SEO Audit · Generated 29 May 2026 · origintoursandtravels.com<br>
+    Built by agricidaniel — AI Marketing Hub · https://www.skool.com/ai-marketing-hub
+  </footer>
+</div>
+</body>
+</html>

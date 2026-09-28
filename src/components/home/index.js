@@ -1,0 +1,10 @@
+export { default as HeroSlider } from "./HeroSlider";
+export { default as TrustedPartners } from "./TrustedPartners";
+export { default as ServicesFlow } from "./ServicesFlow";
+export { default as FeaturedSection } from "./FeaturedSection";
+export { default as HowItWorks } from "./HowItWorks";
+export { default as WhyChooseUs } from "./WhyChooseUs";
+export { default as Testimonials } from "./Testimonials";
+export { default as VideoSection } from "./VideoSection";
+export { default as FAQSection } from "./FAQSection";
+export { default as NewsletterCTA } from "./NewsletterCTA";
