@@ -1,5 +1,5 @@
 import React from "react";
-import { prisma } from "@/lib/prisma";
+import { prisma } from "@/core/lib/prisma";
 import { DashboardInquiries } from "@/core/dashboard/DashboardInquiries";
 import InquiryStatusDonut from "@/core/dashboard/InquiryStatusDonut";
 import DashboardKpis, { type KpiData, type WindowKey } from "@/core/dashboard/DashboardKpis";

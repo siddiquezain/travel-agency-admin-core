@@ -25,7 +25,7 @@ import FlightOutlinedIcon from "@mui/icons-material/FlightOutlined";
 import RichHtmlContent from "@/components/RichHtmlContent";
 import FaqAccordion from "@/components/common/FaqAccordion";
 import EnquiryForm from "@/components/EnquiryForm";
-import { DESTINATION_SECTIONS } from "@/lib/destination-fields";
+import { DESTINATION_SECTIONS } from "@/modules/destinations/destination-fields";
 
 export default function DestinationGuideClient({ destination, relatedVisas = [], canonical }) {
   const sections =

@@ -1,5 +1,5 @@
-import { prisma } from "@/lib/prisma";
-import { normaliseAttestation } from "@/lib/tour-utils";
+import { prisma } from "@/core/lib/prisma";
+import { normaliseAttestation } from "@/modules/tours/tour-utils";
 import AttestationsClient from "./AttestationsClient";
 import FaqAccordion from "../../components/common/FaqAccordion";
 import { serviceJsonLd, breadcrumbJsonLd } from "@/lib/service-jsonld";

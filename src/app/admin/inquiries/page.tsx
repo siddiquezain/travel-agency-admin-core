@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+import { prisma } from "@/core/lib/prisma";
 import { InquiriesTable } from "@/modules/inquiries/InquiriesTable";
 
 export default async function InquiriesPage() {

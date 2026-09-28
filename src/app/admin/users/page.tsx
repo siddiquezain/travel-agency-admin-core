@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+import { prisma } from "@/core/lib/prisma";
 import { UsersTable } from "@/components/admin/UsersTable";
 
 export default async function UsersPage() {

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { startingPriceFromPackages } from "@/lib/tour-utils";
+import { startingPriceFromPackages } from "@/modules/tours/tour-utils";
 
 /**
  * Row → ServiceCard shape normalisers, shared by the public list API routes

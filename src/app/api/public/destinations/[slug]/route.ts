@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { prisma } from "@/core/lib/prisma";
 
 // Public destination guide by slug. Inactive/missing destinations 404.
 export const dynamic = "force-dynamic";

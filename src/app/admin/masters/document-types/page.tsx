@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+import { prisma } from "@/core/lib/prisma";
 import { DocumentTypesTable } from "@/modules/masters/components/DocumentTypesTable";
 
 export default async function DocumentTypesPage() {

@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
-import { prisma } from "@/lib/prisma";
-import { publishedBlogWhere } from "@/lib/blog";
+import { prisma } from "@/core/lib/prisma";
+import { publishedBlogWhere } from "@/modules/blog/blog";
 
 // Generate at request time so tour/visa/attestation/blog detail URLs from the DB
 // are always included. (A build-time static sitemap can miss them if the DB is

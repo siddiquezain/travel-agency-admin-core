@@ -1,5 +1,5 @@
-import { prisma } from "@/lib/prisma";
-import { normaliseVisa } from "@/lib/tour-utils";
+import { prisma } from "@/core/lib/prisma";
+import { normaliseVisa } from "@/modules/tours/tour-utils";
 import VisasClient from "./VisasClient";
 import FaqAccordion from "../../components/common/FaqAccordion";
 import { serviceJsonLd, breadcrumbJsonLd } from "@/lib/service-jsonld";

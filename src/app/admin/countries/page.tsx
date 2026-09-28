@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+import { prisma } from "@/core/lib/prisma";
 import { CountriesTable } from "@/modules/masters/components/CountriesTable";
 
 export default async function CountriesPage() {

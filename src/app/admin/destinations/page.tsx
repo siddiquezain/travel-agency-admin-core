@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+import { prisma } from "@/core/lib/prisma";
 import { DestinationsTable } from "@/modules/destinations/DestinationsTable";
 
 export default async function DestinationsPage() {

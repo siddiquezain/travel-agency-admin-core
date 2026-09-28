@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
-import { requireSession, pick, prismaErrorResponse } from "@/lib/auth";
-import { SITE_SETTING_FIELDS, invalidateSiteSettings } from "@/lib/site-settings";
+import { prisma } from "@/core/lib/prisma";
+import { requireSession, pick, prismaErrorResponse } from "@/core/auth/helpers";
+import { SITE_SETTING_FIELDS, invalidateSiteSettings } from "@/core/lib/site-settings";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 

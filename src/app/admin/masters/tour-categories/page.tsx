@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+import { prisma } from "@/core/lib/prisma";
 import { TourCategoriesTable } from "@/modules/masters/components/TourCategoriesTable";
 
 export default async function TourCategoriesPage() {

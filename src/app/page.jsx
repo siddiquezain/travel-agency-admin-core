@@ -1,12 +1,12 @@
 import { Box } from "@mui/material";
-import { prisma } from "@/lib/prisma";
+import { prisma } from "@/core/lib/prisma";
 import {
   isUmrahTour,
   normaliseTour,
   normaliseVisa,
   normaliseAttestation,
-} from "@/lib/tour-utils";
-import { getSiteSettings, parseHeroSlides } from "@/lib/site-settings";
+} from "@/modules/tours/tour-utils";
+import { getSiteSettings, parseHeroSlides } from "@/core/lib/site-settings";
 
 import {
   HeroSlider,

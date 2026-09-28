@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+import { prisma } from "@/core/lib/prisma";
 import { VisaTypesTable } from "@/modules/masters/components/VisaTypesTable";
 
 export default async function VisaTypesPage() {

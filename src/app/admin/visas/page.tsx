@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+import { prisma } from "@/core/lib/prisma";
 import { VisasTable } from "@/modules/visas/VisasTable";
 
 export default async function VisasPage() {

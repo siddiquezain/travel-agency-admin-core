@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+import { prisma } from "@/core/lib/prisma";
 import { ServiceTypesTable } from "@/modules/masters/components/ServiceTypesTable";
 
 export default async function ServiceTypesPage() {

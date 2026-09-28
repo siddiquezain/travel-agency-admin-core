@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { prisma } from "@/core/lib/prisma";
 import { normaliseVisaCard } from "@/lib/public-card";
 
 export async function GET() {

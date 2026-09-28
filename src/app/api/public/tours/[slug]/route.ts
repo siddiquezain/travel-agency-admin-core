@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { prisma } from "@/core/lib/prisma";
 import { normaliseTourDetail } from "@/lib/public-detail";
 
 export async function GET(

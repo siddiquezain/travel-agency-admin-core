@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
-import { publishedBlogWhere } from "@/lib/blog";
+import { prisma } from "@/core/lib/prisma";
+import { publishedBlogWhere } from "@/modules/blog/blog";
 
 // Publish gate must run per-request; a future-dated post must 404 until its time.
 export const dynamic = "force-dynamic";

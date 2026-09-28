@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
-import { publishedBlogWhere } from "@/lib/blog";
+import { prisma } from "@/core/lib/prisma";
+import { publishedBlogWhere } from "@/modules/blog/blog";
 
 // Evaluate the publish gate on every request rather than serving a cached list,
 // so scheduled posts appear as soon as their publish time passes.

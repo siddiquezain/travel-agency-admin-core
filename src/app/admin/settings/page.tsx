@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+import { prisma } from "@/core/lib/prisma";
 import SettingsForm from "@/components/admin/SettingsForm";
 
 export const dynamic = "force-dynamic";

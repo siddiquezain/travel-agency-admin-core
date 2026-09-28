@@ -1,5 +1,5 @@
 import React from "react";
-import { prisma } from "@/lib/prisma";
+import { prisma } from "@/core/lib/prisma";
 import { BlogPostsTable } from "@/modules/blog/BlogPostsTable";
 
 export default async function AdminBlogPage() {

@@ -5,7 +5,7 @@ import { useSession } from "next-auth/react";
 import { Plus, Pencil, Trash2, X, Download, Search } from "lucide-react";
 import { ImageUploader } from "./ImageUploader";
 import RichTextEditor from "./RichTextEditor";
-import { DESTINATION_SECTIONS } from "@/lib/destination-fields";
+import { DESTINATION_SECTIONS } from "@/modules/destinations/destination-fields";
 
 type Country = { id: number; name: string; code: string };
 type Faq = { q: string; a: string };

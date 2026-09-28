@@ -1,10 +1,10 @@
 import { notFound } from "next/navigation";
-import { prisma } from "@/lib/prisma";
+import { prisma } from "@/core/lib/prisma";
 import TourDetailClient from "./TourDetailClient";
 import UmrahTourDetailClient from "./UmrahTourDetailClient";
 import { touristTripJsonLd, breadcrumbJsonLd } from "@/lib/service-jsonld";
 import { normaliseTourDetail } from "@/lib/public-detail";
-import { isUmrahTour } from "@/lib/tour-utils";
+import { isUmrahTour } from "@/modules/tours/tour-utils";
 import { getRelatedTours, getRelatedUmrahTours } from "@/lib/related";
 
 export const revalidate = 300;

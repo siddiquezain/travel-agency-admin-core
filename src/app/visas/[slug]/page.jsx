@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { prisma } from "@/lib/prisma";
+import { prisma } from "@/core/lib/prisma";
 import VisaDetailClient from "./VisaDetailClient";
 import { serviceJsonLd, breadcrumbJsonLd } from "@/lib/service-jsonld";
 import { normaliseVisaDetail, buildVisaTitle } from "@/lib/public-detail";

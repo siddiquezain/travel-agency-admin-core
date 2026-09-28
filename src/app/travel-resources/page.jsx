@@ -1,7 +1,7 @@
-import { prisma } from "@/lib/prisma";
+import { prisma } from "@/core/lib/prisma";
 import BlogClient from "./BlogClient";
 import { breadcrumbJsonLd } from "@/lib/service-jsonld";
-import { publishedBlogWhere } from "@/lib/blog";
+import { publishedBlogWhere } from "@/modules/blog/blog";
 
 const jsonLd = {
   "@context": "https://schema.org",

@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+import { prisma } from "@/core/lib/prisma";
 import DestinationsClient from "./DestinationsClient";
 import { breadcrumbJsonLd } from "@/lib/service-jsonld";
 

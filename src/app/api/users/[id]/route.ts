@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
-import { requireSession, parseId, invalidIdResponse, prismaErrorResponse } from "@/lib/auth";
+import { prisma } from "@/core/lib/prisma";
+import { requireSession, parseId, invalidIdResponse, prismaErrorResponse } from "@/core/auth/helpers";
 import bcrypt from "bcryptjs";
 
 export async function GET(_: NextRequest, { params }: { params: Promise<{ id: string }> }) {

@@ -1,9 +1,9 @@
 import { notFound } from "next/navigation";
-import { prisma } from "@/lib/prisma";
+import { prisma } from "@/core/lib/prisma";
 import BlogPostClient from "./BlogPostClient";
-import { blogPostingJsonLd } from "@/lib/blog-jsonld";
+import { blogPostingJsonLd } from "@/modules/blog/blog-jsonld";
 import { breadcrumbJsonLd } from "@/lib/service-jsonld";
-import { publishedBlogWhere } from "@/lib/blog";
+import { publishedBlogWhere } from "@/modules/blog/blog";
 
 const SITE_URL = "https://origintoursandtravels.com";
 

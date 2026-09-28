@@ -1,5 +1,5 @@
-import { prisma } from "@/lib/prisma";
-import { isUmrahTour, normaliseTour } from "@/lib/tour-utils";
+import { prisma } from "@/core/lib/prisma";
+import { isUmrahTour, normaliseTour } from "@/modules/tours/tour-utils";
 import ToursClient from "./ToursClient";
 import FaqAccordion from "../../components/common/FaqAccordion";
 import { serviceJsonLd, breadcrumbJsonLd } from "@/lib/service-jsonld";

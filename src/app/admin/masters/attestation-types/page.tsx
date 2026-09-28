@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+import { prisma } from "@/core/lib/prisma";
 import { AttestationTypesTable } from "@/modules/masters/components/AttestationTypesTable";
 
 export default async function AttestationTypesPage() {

@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+import { prisma } from "@/core/lib/prisma";
 
 const TOUR_KEYWORDS: Array<{ name: string; keywords: string[] }> = [
   { name: "Delhi Agra Jaipur Tour Packages", keywords: ["delhi", "agra", "jaipur"] },

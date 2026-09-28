@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { prisma } from "@/lib/prisma";
+import { prisma } from "@/core/lib/prisma";
 import AttestationDetailClient from "./AttestationDetailClient";
 import { serviceJsonLd, breadcrumbJsonLd } from "@/lib/service-jsonld";
 import { normaliseAttestationDetail } from "@/lib/public-detail";

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { prisma } from "@/core/lib/prisma";
 
 // Public destinations listing. Only active destinations are exposed; featured
 // first, then manual sortOrder, then alphabetical. Evaluated per request so

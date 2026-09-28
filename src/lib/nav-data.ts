@@ -1,5 +1,5 @@
-import { prisma } from "@/lib/prisma";
-import { RESOURCE_CATEGORIES } from "@/lib/travel-resources";
+import { prisma } from "@/core/lib/prisma";
+import { RESOURCE_CATEGORIES } from "@/modules/blog/travel-resources";
 
 // Data source for the header mega-menus. Fetched once per request in the root
 // layout (server) and passed into the client Header. Falls back to empty lists

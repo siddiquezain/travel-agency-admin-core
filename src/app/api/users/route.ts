@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
-import { requireSession } from "@/lib/auth";
+import { prisma } from "@/core/lib/prisma";
+import { requireSession } from "@/core/auth/helpers";
 import bcrypt from "bcryptjs";
 
 export async function GET() {

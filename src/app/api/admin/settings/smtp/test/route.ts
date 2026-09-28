@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { requireSession } from "@/lib/auth";
-import { sendTestEmail } from "@/lib/mailer";
+import { requireSession } from "@/core/auth/helpers";
+import { sendTestEmail } from "@/core/lib/mailer";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 

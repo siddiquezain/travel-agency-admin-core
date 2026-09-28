@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
-import { prisma } from "@/lib/prisma";
+import { prisma } from "@/core/lib/prisma";
 import DestinationGuideClient from "./DestinationGuideClient";
-import { destinationGraph } from "@/lib/destination-jsonld";
+import { destinationGraph } from "@/modules/destinations/destination-jsonld";
 
 const SITE_URL = "https://origintoursandtravels.com";
 

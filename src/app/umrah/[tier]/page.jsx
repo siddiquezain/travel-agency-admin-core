@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { Box, Container, Typography, Button, Grid, Stack, Chip } from "@mui/material";
-import { prisma } from "@/lib/prisma";
-import { isUmrahTour, normaliseTour } from "@/lib/tour-utils";
+import { prisma } from "@/core/lib/prisma";
+import { isUmrahTour, normaliseTour } from "@/modules/tours/tour-utils";
 import ServiceCard from "@/components/ServiceCard";
 import FaqAccordion from "../../../components/common/FaqAccordion";
 import { touristTripJsonLd, breadcrumbJsonLd } from "@/lib/service-jsonld";
