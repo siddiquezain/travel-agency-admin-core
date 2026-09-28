@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Travel Agency Admin Core
 
-## Getting Started
+A production-ready Next.js admin dashboard template for travel agencies. Clone this repo to start a new agency project.
 
-First, run the development server:
+## Quick Start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone git@github.com:your-org/travel-agency-admin-core.git my-agency
+cd my-agency
+cp .env.example .env          # fill in DATABASE_URL, NEXTAUTH_SECRET
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 1. Configure the agency
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Edit **`src/config/agency.ts`** — name, logo, contact details, primary colour, WhatsApp number.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 2. Enable/disable modules
 
-## Learn More
+Edit **`src/config/modules.ts`** — set any module to `false` to remove it from the admin nav.
 
-To learn more about Next.js, take a look at the following resources:
+To permanently remove a module:
+1. Set it to `false` in `modules.ts`
+2. Delete `src/modules/<name>/`
+3. Delete `src/app/admin/<name>/` and `src/app/api/<name>/`
+4. Remove the Prisma model from `prisma/schema.prisma` and run `db push`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. Start the app
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+docker compose up --build
+docker compose exec app npx prisma db push
+```
 
-## Deploy on Vercel
+Visit `http://localhost:3000/admin`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/
+├── app/          # Next.js routing — thin files only, no logic
+├── core/         # Infrastructure — auth, admin shell, UI components, lib
+│   ├── admin/    # AdminLayout, Sidebar (driven by config/nav.ts)
+│   ├── auth/     # NextAuth config, rate limiter, session helpers
+│   ├── dashboard/# KPI cards, inquiry table, donut chart
+│   ├── lib/      # Prisma client, mailer, site-settings, email templates
+│   └── ui/       # ConfirmDialog, ImageUploader, RichTextEditor
+├── modules/      # Feature modules — each independently removable
+│   ├── tours/    # ToursTable, handlers, tour-utils
+│   ├── visas/
+│   ├── attestations/
+│   ├── blog/
+│   ├── destinations/
+│   ├── inquiries/
+│   └── masters/
+├── config/       # ← Start here for a new project
+│   ├── agency.ts
+│   ├── modules.ts
+│   └── nav.ts
+└── components/   # Public-facing skeleton (stubs — add your own content)
+```
+
+## Development
+
+```bash
+docker compose up -d              # start
+docker compose logs -f app        # stream logs
+docker compose exec app npx prisma studio   # DB GUI
+npm run lint                      # lint (host-only)
+```
+
+## Adding a new module
+
+1. Create `src/modules/<name>/` with a table component and `handlers.ts`
+2. Add API routes in `src/app/api/<name>/route.ts` (re-export from handlers)
+3. Add an admin page in `src/app/admin/<name>/page.tsx`
+4. Add a Prisma model to `prisma/schema.prisma`, run `db push`
+5. Add a nav item to `src/config/nav.ts`
