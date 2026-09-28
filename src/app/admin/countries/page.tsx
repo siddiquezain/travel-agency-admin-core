@@ -1,5 +1,5 @@
 import { prisma } from "@/lib/prisma";
-import { CountriesTable } from "@/components/admin/CountriesTable";
+import { CountriesTable } from "@/modules/masters/components/CountriesTable";
 
 export default async function CountriesPage() {
     const countries = await prisma.country.findMany({ orderBy: { name: "asc" } });

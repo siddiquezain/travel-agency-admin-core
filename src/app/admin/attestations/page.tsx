@@ -1,5 +1,5 @@
 import { prisma } from "@/lib/prisma";
-import { AttestationsTable } from "@/components/admin/AttestationsTable";
+import { AttestationsTable } from "@/modules/attestations/AttestationsTable";
 
 export default async function AttestationsPage() {
     const attestations = await prisma.attestation.findMany({ orderBy: { createdAt: "desc" } });

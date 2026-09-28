@@ -1,5 +1,5 @@
 import { prisma } from "@/lib/prisma";
-import { DestinationsTable } from "@/components/admin/DestinationsTable";
+import { DestinationsTable } from "@/modules/destinations/DestinationsTable";
 
 export default async function DestinationsPage() {
     const [destinations, countries] = await Promise.all([

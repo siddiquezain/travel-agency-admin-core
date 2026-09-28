@@ -1,5 +1,5 @@
 import { prisma } from "@/lib/prisma";
-import { AttestationTypesTable } from "@/components/admin/AttestationTypesTable";
+import { AttestationTypesTable } from "@/modules/masters/components/AttestationTypesTable";
 
 export default async function AttestationTypesPage() {
     const items = await prisma.attestationType.findMany({ orderBy: { name: "asc" } });

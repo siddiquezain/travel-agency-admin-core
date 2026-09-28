@@ -1,8 +1,8 @@
 import React from "react";
 import { prisma } from "@/lib/prisma";
-import { DashboardInquiries } from "@/components/admin/DashboardInquiries";
-import InquiryStatusDonut from "@/components/admin/InquiryStatusDonut";
-import DashboardKpis, { type KpiData, type WindowKey } from "@/components/admin/DashboardKpis";
+import { DashboardInquiries } from "@/core/dashboard/DashboardInquiries";
+import InquiryStatusDonut from "@/core/dashboard/InquiryStatusDonut";
+import DashboardKpis, { type KpiData, type WindowKey } from "@/core/dashboard/DashboardKpis";
 
 const DAY = 24 * 60 * 60 * 1000;
 
