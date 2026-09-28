@@ -1,27 +1,28 @@
+import { agency } from './config/agency'
 
 const getDesignTokens = (mode) => ({
   palette: {
     mode,
     primary: {
-      ...(mode === "light"
+      ...(mode === 'light'
         ? {
-            main: "#1A428A", // Brand Deep Blue (Origin)
-            light: "#2AB0E5", // Brand Cyan
-            dark: "#102A56", // Darker Royal
-            contrastText: "#ffffff",
+            main: agency.primaryColor,
+            light: agency.primaryLight,
+            dark: agency.primaryColor,
+            contrastText: '#ffffff',
           }
         : {
-            main: "#2AB0E5", // Brand Cyan (Visible on Dark)
-            light: "#7DD3FC",
-            dark: "#0284C7",
-            contrastText: "#0F172A",
+            main: agency.primaryLight,
+            light: '#7DD3FC',
+            dark: agency.primaryColor,
+            contrastText: '#0F172A',
           }),
     },
     secondary: {
-      main: mode === "light" ? "#2AB0E5" : "#2AB0E5", // Brand Cyan
-      light: "#67DAFF",
-      dark: "#0085B3",
-      contrastText: mode === "light" ? "#ffffff" : "#0F172A",
+      main: agency.primaryLight,
+      light: '#67DAFF',
+      dark: '#0085B3',
+      contrastText: mode === 'light' ? '#ffffff' : '#0F172A',
     },
     background: {
       default: mode === "light" ? "#F8FAFC" : "#020617", // Slate-50 vs Deep Slate
@@ -117,12 +118,12 @@ const getDesignTokens = (mode) => ({
         },
         containedPrimary: {
           background:
-            mode === "light"
-              ? "linear-gradient(135deg, #1A428A 0%, #2AB0E5 100%)" // Brand Blue to Cyan
-              : "linear-gradient(135deg, #0284C7 0%, #2AB0E5 100%)", // Dark Blue to Cyan
+            mode === 'light'
+              ? `linear-gradient(135deg, ${agency.primaryColor} 0%, ${agency.primaryLight} 100%)`
+              : `linear-gradient(135deg, #0284C7 0%, ${agency.primaryLight} 100%)`,
         },
         containedSecondary: {
-          background: "linear-gradient(135deg, #2AB0E5 0%, #67DAFF 100%)",
+          background: `linear-gradient(135deg, ${agency.primaryLight} 0%, #67DAFF 100%)`,
         },
       },
     },
