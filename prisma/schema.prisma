@@ -234,7 +234,7 @@ model Inquiry {
 
 model SiteSetting {
   id           Int      @id @default(1)
-  companyName  String   @default("Origin Tours and Travels")
+  companyName  String   @default("")
   tagline      String?
   supportEmail String?
   supportPhone String?
