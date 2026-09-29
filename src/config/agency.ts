@@ -15,7 +15,6 @@ export const agency = {
   primaryLight: '#2AB0E5',
   supportEmail: 'info@origin-travels.com',
   supportPhone: '+971 50 123 4567',
-  whatsapp: '917095787635',   // digits only, no +, no spaces — used in wa.me URL
+  whatsapp: '971501234567',   // digits only, no +, no spaces — used in wa.me URL
   address: 'Dubai, UAE',
-  recaptchaSiteKey: process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? '',
 } as const

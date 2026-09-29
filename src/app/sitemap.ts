@@ -7,25 +7,16 @@ import { publishedBlogWhere } from "@/modules/blog/blog";
 // unreachable during the build, falling back to static routes only.)
 export const dynamic = "force-dynamic";
 
-const SITE_URL = "https://origintoursandtravels.com";
+const SITE_URL = process.env.NEXTAUTH_URL || "http://localhost:3000";
 
 const STATIC_ROUTES: { path: string; changeFrequency: "daily" | "weekly" | "monthly"; priority: number }[] = [
   { path: "/", changeFrequency: "weekly", priority: 1.0 },
-  { path: "/umrah", changeFrequency: "weekly", priority: 0.9 },
-  { path: "/hajj", changeFrequency: "weekly", priority: 0.9 },
-  { path: "/destinations", changeFrequency: "weekly", priority: 0.9 },
-  { path: "/flights", changeFrequency: "weekly", priority: 0.9 },
   { path: "/tours", changeFrequency: "weekly", priority: 0.9 },
   { path: "/visas", changeFrequency: "weekly", priority: 0.9 },
   { path: "/attestations", changeFrequency: "weekly", priority: 0.8 },
-  { path: "/travel-resources", changeFrequency: "weekly", priority: 0.9 },
-  { path: "/hotels", changeFrequency: "weekly", priority: 0.8 },
-  { path: "/transport", changeFrequency: "weekly", priority: 0.8 },
-  { path: "/about", changeFrequency: "monthly", priority: 0.5 },
+  { path: "/destinations", changeFrequency: "weekly", priority: 0.9 },
+  { path: "/travel-resources", changeFrequency: "weekly", priority: 0.8 },
   { path: "/contact", changeFrequency: "monthly", priority: 0.5 },
-  { path: "/privacy", changeFrequency: "monthly", priority: 0.3 },
-  { path: "/terms", changeFrequency: "monthly", priority: 0.3 },
-  { path: "/refund", changeFrequency: "monthly", priority: 0.3 },
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

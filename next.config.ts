@@ -53,33 +53,6 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      // ── IA redesign: section renames (preserve SEO on old URLs) ──
-      { source: "/air-ticketing", destination: "/flights", permanent: true },
-      { source: "/hotel-booking", destination: "/hotels", permanent: true },
-      { source: "/blog", destination: "/travel-resources", permanent: true },
-      {
-        source: "/blog/:slug",
-        destination: "/travel-resources/:slug",
-        permanent: true,
-      },
-      {
-        source: "/visas/azherbaijan-urgent-e-visa",
-        destination: "/visas/azerbaijan-urgent-e-visa",
-        permanent: true,
-      },
-      {
-        source: "/visas/azherbaijan-standard-e-visa",
-        destination: "/visas/azerbaijan-standard-e-visa",
-        permanent: true,
-      },
-      // Typo'd duplicate ("certifcate") of the polio attestation page — consolidate
-      // into the correctly-spelled page so the two don't compete for the same query.
-      {
-        source: "/attestations/polio-certifcate-mp5bfw15",
-        destination: "/attestations/polio-certificate-mp5bhxn7",
-        permanent: true,
-      },
-      // ── Dead URLs from the GSC "Not found (404)" export ──
       ...legacyRedirects,
     ];
   },

@@ -120,7 +120,7 @@ const getDesignTokens = (mode) => ({
           background:
             mode === 'light'
               ? `linear-gradient(135deg, ${agency.primaryColor} 0%, ${agency.primaryLight} 100%)`
-              : `linear-gradient(135deg, #0284C7 0%, ${agency.primaryLight} 100%)`,
+              : `linear-gradient(135deg, ${agency.primaryColor} 0%, ${agency.primaryLight} 100%)`,
         },
         containedSecondary: {
           background: `linear-gradient(135deg, ${agency.primaryLight} 0%, #67DAFF 100%)`,
