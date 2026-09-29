@@ -1,5 +1,5 @@
-const SITE_URL = "https://origintoursandtravels.com";
-const SITE_NAME = "Origin Tours and Travels";
+const SITE_URL = process.env.NEXTAUTH_URL || "http://localhost:3000";
+const SITE_NAME = process.env.NEXT_PUBLIC_AGENCY_NAME || "Travel Agency";
 
 function absoluteUrl(maybeRelative: string | null | undefined): string | null {
     if (!maybeRelative) return null;

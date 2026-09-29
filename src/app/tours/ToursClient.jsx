@@ -213,7 +213,7 @@ const ToursClient = ({ initialItems = [] }) => {
         <Box
           component="img"
           src={toursHero.src}
-          alt="Holiday Packages — Origin Tours and Travels"
+          alt="Holiday Packages"
           loading="eager"
           sx={{
             position: "absolute",
@@ -254,7 +254,7 @@ const ToursClient = ({ initialItems = [] }) => {
               color: "common.white",
             }}
           >
-            Holiday packages from Hyderabad – domestic &amp; international
+            Holiday packages – domestic &amp; international
           </Typography>
           <Typography
             variant="h6"

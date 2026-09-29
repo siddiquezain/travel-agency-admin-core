@@ -4,8 +4,9 @@ import BlogPostClient from "./BlogPostClient";
 import { blogPostingJsonLd } from "@/modules/blog/blog-jsonld";
 import { breadcrumbJsonLd } from "@/lib/service-jsonld";
 import { publishedBlogWhere } from "@/modules/blog/blog";
+import { agency } from "@/config/agency";
 
-const SITE_URL = "https://origintoursandtravels.com";
+const SITE_URL = process.env.NEXTAUTH_URL || "http://localhost:3000";
 
 // Evaluate the publish gate per-request so a scheduled post 404s until its exact
 // publish time, then becomes visible immediately (no ISR cache lag).
@@ -38,7 +39,7 @@ export async function generateMetadata({ params }) {
   const description =
     post.metaDescription ||
     post.excerpt ||
-    `Read "${post.title}" on the Origin Tours and Travels blog.`;
+    `Read "${post.title}" on the ${agency.name} blog.`;
   const canonical = `/travel-resources/${post.slug}`;
   const image = post.featuredImage || "/og-default.jpg";
 

@@ -42,12 +42,12 @@ function emailShell(title: string, bodyHtml: string): string {
     <tr><td align="center">
       <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;background:#ffffff;border:1px solid ${BORDER};border-radius:12px;overflow:hidden;">
         <tr><td style="background:${BRAND_NAVY};padding:24px 28px;">
-          <div style="color:#ffffff;font-size:20px;font-weight:700;letter-spacing:0.2px;">Origin Tours &amp; Travels</div>
+          <div style="color:#ffffff;font-size:20px;font-weight:700;letter-spacing:0.2px;">Travel Agency</div>
           <div style="color:${BRAND_GOLD};font-size:12px;font-weight:600;letter-spacing:1.5px;margin-top:4px;text-transform:uppercase;">${escapeHtml(title)}</div>
         </td></tr>
         ${bodyHtml}
         <tr><td style="padding:18px 28px;background:${BG_SOFT};border-top:1px solid ${BORDER};font-size:12px;color:${TEXT_MUTED};">
-          Origin Tours &amp; Travels &middot; Hyderabad, India &middot; <a href="https://wa.me/919177787635" style="color:${BRAND_NAVY};text-decoration:none;">WhatsApp +91 91777 87635</a>
+          Your Travel Agency
         </td></tr>
       </table>
     </td></tr>
@@ -99,7 +99,7 @@ export function renderAdminInquiry(p: InquiryEmailPayload): RenderedEmail {
 }
 
 export function renderCustomerAck(p: InquiryEmailPayload): RenderedEmail {
-    const subject = "We received your enquiry — Origin Tours & Travels";
+    const subject = "We received your enquiry";
     const firstName = p.name.split(/\s+/)[0] || p.name;
     const service = p.serviceType ? `<strong>${escapeHtml(p.serviceType)}</strong>` : "your travel plans";
 
@@ -120,8 +120,7 @@ export function renderCustomerAck(p: InquiryEmailPayload): RenderedEmail {
         </td></tr>
         <tr><td style="padding:20px 28px 8px 28px;">
           <div style="font-size:13px;color:${TEXT_MUTED};margin-bottom:10px;">Need to talk to us sooner?</div>
-          <a href="https://wa.me/919177787635" style="display:inline-block;padding:12px 22px;background:#25D366;color:#ffffff;text-decoration:none;border-radius:50px;font-weight:700;font-size:14px;">Chat on WhatsApp</a>
-          <span style="display:inline-block;margin-left:12px;font-size:14px;color:${TEXT_DARK};">or call <a href="tel:+919177787635" style="color:${BRAND_NAVY};text-decoration:none;font-weight:600;">+91 91777 87635</a></span>
+          <span style="font-size:14px;color:${TEXT_DARK};">Our team will be in touch shortly.</span>
         </td></tr>
         <tr><td style="padding:18px 28px 28px 28px;">
           <div style="font-size:12px;color:${TEXT_MUTED};line-height:1.6;">
@@ -139,11 +138,7 @@ export function renderCustomerAck(p: InquiryEmailPayload): RenderedEmail {
         "  2. We'll share a tailored itinerary, pricing, and available dates.",
         "  3. Once you're happy, we lock in bookings, visas, and tickets.",
         "",
-        "Need to talk to us sooner?",
-        "  WhatsApp: https://wa.me/919177787635",
-        "  Phone:    +91 91777 87635",
-        "",
-        "— Origin Tours & Travels",
+        "Our team will be in touch shortly.",
     ].join("\n");
 
     return { subject, html: emailShell("Enquiry received", body), text };

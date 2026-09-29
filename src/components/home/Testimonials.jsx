@@ -25,7 +25,7 @@ const allReviews = [
     name: "Sara M.",
     location: "Mumbai",
     quote:
-      "Booked a Dubai tour with Origin. The itinerary was perfect, hotels were premium, and the on-ground support was amazing.",
+      "Booked a Dubai tour through this agency. The itinerary was perfect, hotels were premium, and the on-ground support was amazing.",
     rating: 5,
     color: sectionColors.blue,
   },
@@ -65,7 +65,7 @@ const allReviews = [
     name: "Ananya P.",
     location: "Pune",
     quote:
-      "Thailand trip organized by Origin was the best vacation ever. Loved the island hopping experience!",
+      "Thailand trip was the best vacation ever. Loved the island hopping experience — everything was perfectly organized!",
     rating: 5,
     color: sectionColors.purple,
   },
@@ -113,7 +113,7 @@ const allReviews = [
     name: "Zainab F.",
     location: "Hyderabad",
     quote:
-      "Booked Umrah for my parents. The VIP package with wheelchair assistance was a blessing. Thank you, Origin!",
+      "Booked Umrah for my parents. The VIP package with wheelchair assistance was a blessing. Highly recommended!",
     rating: 5,
     color: sectionColors.teal,
   },
@@ -177,7 +177,7 @@ const allReviews = [
     name: "Salma B.",
     location: "Hyderabad",
     quote:
-      "Third time booking with Origin for Umrah. Consistent quality every single time. They are the best!",
+      "Third time booking for Umrah with this agency. Consistent quality every single time. They are the best!",
     rating: 5,
     color: sectionColors.amber,
   },

@@ -13,7 +13,7 @@
 
 type Maybe<T> = T | null | undefined;
 
-export const SITE_URL = "https://origintoursandtravels.com";
+export const SITE_URL = process.env.NEXTAUTH_URL || "http://localhost:3000";
 const TRAVELAGENCY_ID = `${SITE_URL}#travelagency`;
 
 const abs = (path: string) =>
@@ -85,7 +85,7 @@ export function serviceJsonLd(args: {
   const image = firstImage(args.images);
   const description =
     (args.description ?? "").trim() ||
-    `${args.name} — book with Origin Tours and Travels, Hyderabad's trusted travel partner.`;
+    `${args.name} — contact us to learn more.`;
   return {
     "@type": "Service",
     name: args.name,
@@ -126,7 +126,7 @@ export function touristTripJsonLd(args: {
   const image = args.image ? abs(args.image) : firstImage(args.images);
   const description =
     (args.description ?? "").trim() ||
-    `${args.name} — book with Origin Tours and Travels, Hyderabad's trusted travel partner.`;
+    `${args.name} — contact us to learn more.`;
   return {
     "@type": "TouristTrip",
     name: args.name,

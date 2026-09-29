@@ -53,20 +53,20 @@ const OVERLAY_GRADIENT =
 // button is shared by every slide.
 const TEXT_SLIDES = [
   {
-    heading: "Origin Tours & Travels — Umrah, Hajj & Holiday Packages from Hyderabad",
+    heading: "Your Trusted Travel Partner — Holidays, Visas & More",
     cta: { label: "Explore Packages", href: "/tours" },
-  },
-  {
-    heading: "Your Journey to the Holy Cities Begins Here.",
-    cta: { label: "Plan Your Umrah", href: "/umrah" },
   },
   {
     heading: "The World is Waiting. Where Will You Go Next?",
     cta: { label: "Start Exploring", href: "/tours?scope=international" },
   },
   {
-    heading: "Discover the Magic of India. Leave the Planning to Us.",
-    cta: { label: "Explore India", href: "/tours?scope=domestic" },
+    heading: "Discover Amazing Destinations. Leave the Planning to Us.",
+    cta: { label: "Browse Tours", href: "/tours?scope=domestic" },
+  },
+  {
+    heading: "Visa Services, Attestation & More — All in One Place.",
+    cta: { label: "View Services", href: "/visas" },
   },
 ];
 const TEXT_ROTATE_MS = 7000;

@@ -4,6 +4,7 @@ import AttestationDetailClient from "./AttestationDetailClient";
 import { serviceJsonLd, breadcrumbJsonLd } from "@/lib/service-jsonld";
 import { normaliseAttestationDetail } from "@/lib/public-detail";
 import { getRelatedAttestations } from "@/lib/related";
+import { agency } from "@/config/agency";
 
 export const revalidate = 300;
 
@@ -24,7 +25,7 @@ export async function generateMetadata({ params }) {
   const title = `${item.type}${item.country ? ` – ${item.country}` : ""}`;
   const description =
     (item.description ?? "").slice(0, 160) ||
-    `Official ${title} attestation services from Origin Tours and Travels, Hyderabad.`;
+    `Official ${title} attestation services from ${agency.name}.`;
   const images = Array.isArray(item.images) ? item.images : [];
   const image = typeof images[0] === "string" ? images[0] : "/og-default.jpg";
   const canonical = `/attestations/${item.slug}`;
@@ -34,7 +35,7 @@ export async function generateMetadata({ params }) {
     description,
     alternates: { canonical },
     openGraph: {
-      title: `${title} | Origin Tours and Travels`,
+      title: `${title} | ${agency.name}`,
       description,
       url: canonical,
       type: "article",

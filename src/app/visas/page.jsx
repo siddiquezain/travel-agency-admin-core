@@ -3,16 +3,17 @@ import { normaliseVisa } from "@/modules/tours/tour-utils";
 import VisasClient from "./VisasClient";
 import FaqAccordion from "../../components/common/FaqAccordion";
 import { serviceJsonLd, breadcrumbJsonLd } from "@/lib/service-jsonld";
+import { agency } from "@/config/agency";
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     serviceJsonLd({
-      name: "Tourist & Business Visa Services in Hyderabad",
+      name: "Tourist & Business Visa Services",
       serviceType: "Visa processing and stamping",
       path: "/visas",
       description:
-        "Tourist and business visa processing and stamping from Hyderabad for UAE, UK, USA, Schengen, Vietnam, Uzbekistan, Saudi Arabia and more, with complete documentation support.",
+        "Tourist and business visa processing and stamping for UAE, UK, USA, Schengen, Vietnam, Uzbekistan, Saudi Arabia and more, with complete documentation support.",
     }),
     breadcrumbJsonLd([{ name: "Visa Services", path: "/visas" }]),
   ],
@@ -22,17 +23,17 @@ export const dynamic = "force-dynamic";
 
 export const metadata = {
   title: {
-    absolute: "Tourist Visa & Stamping Services Hyderabad – Origin Tours",
+    absolute: `Tourist Visa & Stamping Services – ${agency.name}`,
   },
   description:
-    "Fast and hassle-free tourist visa processing for all major countries. Origin Tours & Travels, Hyderabad handles all documentation & stamping services for you.",
+    `Fast and hassle-free tourist visa processing for all major countries. ${agency.name} handles all documentation & stamping services for you.`,
   keywords:
-    "tourist visa Hyderabad, visa stamping agent Hyderabad, visa processing India, Schengen visa agent Hyderabad, Dubai visa from Hyderabad, visa services near me Hyderabad, visa agent Masab Tank Hyderabad",
+    "tourist visa, visa stamping, visa processing, Schengen visa, Dubai visa, visa services",
   alternates: { canonical: "/visas" },
   openGraph: {
-    title: "Tourist Visa & Stamping Services Hyderabad – Origin Tours",
+    title: `Tourist Visa & Stamping Services – ${agency.name}`,
     description:
-      "Fast, hassle-free tourist visa processing and stamping for all major countries, from Hyderabad.",
+      "Fast, hassle-free tourist visa processing and stamping for all major countries.",
     url: "/visas",
     type: "website",
   },
@@ -40,11 +41,11 @@ export const metadata = {
 
 const visaFaqs = [
   {
-    q: "How long does visa processing take from Hyderabad?",
+    q: "How long does visa processing take?",
     a: "Depends on the country. UAE typically 2–3 working days, Schengen 15–20 working days, UK 3–4 weeks. We advise applying well in advance.",
   },
   {
-    q: "What is the cost of a tourist visa from Hyderabad?",
+    q: "What is the cost of a tourist visa?",
     a: "Visa fees vary by country. Contact us for a current fee breakdown including embassy fees and our service charge.",
   },
   {

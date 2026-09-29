@@ -33,6 +33,7 @@ import {
   shadow,
   sectionColors,
 } from '../../config/designSystem';
+import { agency } from '../../config/agency';
 import FaqAccordion from '../../components/common/FaqAccordion';
 import GoogleMap from '../../components/common/GoogleMap';
 import { breadcrumbJsonLd } from "@/lib/service-jsonld";
@@ -128,45 +129,45 @@ const contactMethods = [
   {
     icon: Phone,
     title: "Call Us",
-    primary: "+91 91777 87635",
-    secondary: "Mon–Sat, 9 AM – 7 PM IST",
+    primary: agency.supportPhone,
+    secondary: "Mon–Sat, 9 AM – 7 PM",
     color: sectionColors.blue,
-    href: "tel:+919177787635",
+    href: `tel:${agency.supportPhone.replace(/[^+\d]/g, "")}`,
     chipLabel: "Instant",
   },
   {
     icon: WhatsApp,
     title: "WhatsApp",
-    primary: "+91 91777 87635",
+    primary: agency.supportPhone,
     secondary: "Quick responses, 24/7",
     color: sectionColors.emerald,
-    href: "https://wa.me/919177787635",
+    href: `https://wa.me/${agency.whatsapp}`,
     chipLabel: "24/7",
   },
   {
     icon: Email,
     title: "Email Us",
-    primary: "sales@origingroups.com",
+    primary: agency.supportEmail,
     secondary: "We reply within 2 hours",
     color: sectionColors.amber,
-    href: "mailto:sales@origingroups.com",
+    href: `mailto:${agency.supportEmail}`,
     chipLabel: "2hr Reply",
   },
   {
     icon: LocationOn,
     title: "Visit Us",
-    primary: "Third Floor, Serene Heights, Humayun Nagar Rd",
-    secondary: "Masab Tank, Hyderabad-500028, Telangana, India",
+    primary: agency.address,
+    secondary: "",
     color: sectionColors.purple,
-    href: "https://www.google.com/maps/place/Origin+Tours+and+Travels/data=!4m2!3m1!1s0x0:0x94ba7b774d9ffdb9?sa=X&ved=1t:2428&hl=en&gl=in&ictx=111",
+    href: "https://maps.google.com",
     chipLabel: "Walk-in",
   },
 ];
 
 const contactFaqs = [
   {
-    q: "Where is Origin Tours & Travels located in Hyderabad?",
-    a: "Third Floor, Serene Heights, Humayun Nagar Road, Masab Tank, Hyderabad-500028, Telangana, India.",
+    q: "Where is your office located?",
+    a: agency.address,
   },
   {
     q: "What are your office working hours?",
@@ -174,7 +175,7 @@ const contactFaqs = [
   },
   {
     q: "Can I contact you on WhatsApp?",
-    a: "Yes, WhatsApp us on +91 91777 87635. We typically respond within 30 minutes during working hours.",
+    a: `Yes, WhatsApp us on ${agency.supportPhone}. We typically respond within 30 minutes during working hours.`,
   },
 ];
 
@@ -302,7 +303,7 @@ const Contact = () => {
               lineHeight: 1.15,
             }}
           >
-            Contact Origin Tours &amp; Travels –
+            Contact {agency.name} —
             <br />
             we&apos;re here to help
           </Typography>
@@ -847,7 +848,7 @@ const Contact = () => {
                   </Typography>
                   <Button
                     component="a"
-                    href="https://wa.me/919177787635"
+                    href={`https://wa.me/${agency.whatsapp}`}
                     target="_blank"
                     variant="contained"
                     startIcon={<WhatsApp />}
@@ -906,7 +907,7 @@ const Contact = () => {
                 color="text.secondary"
                 sx={{ lineHeight: 1.8, mb: 4, maxWidth: 500 }}
               >
-                Our office is conveniently located in the heart of Hyderabad.
+                Our office is conveniently located for you to visit.
                 Walk in for a personal consultation with our travel experts.
               </Typography>
 
@@ -940,8 +941,7 @@ const Contact = () => {
                       color="text.secondary"
                       sx={{ lineHeight: 1.7 }}
                     >
-                      Third Floor, Serene Heights, Humayun Nagar Rd, Masab Tank,
-                      Hyderabad-500028, Telangana, India
+                      {agency.address}
                     </Typography>
                   </Box>
                 </Stack>
@@ -1188,7 +1188,7 @@ const Contact = () => {
           >
             <Button
               component="a"
-              href="tel:+919177787635"
+              href={`tel:${agency.supportPhone.replace(/[^+\d]/g, "")}`}
               variant="contained"
               size="large"
               startIcon={<Phone />}
@@ -1216,7 +1216,7 @@ const Contact = () => {
             </Button>
             <Button
               component="a"
-              href="https://wa.me/919177787635"
+              href={`https://wa.me/${agency.whatsapp}`}
               target="_blank"
               variant="outlined"
               size="large"

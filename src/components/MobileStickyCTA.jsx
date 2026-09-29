@@ -3,6 +3,7 @@ import React from "react";
 import { Box, Button, Stack, Typography } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import SendIcon from "@mui/icons-material/Send";
+import { agency } from "../config/agency";
 
 /**
  * Mobile sticky CTA bar â€” shown at the bottom of detail pages on small screens.
@@ -12,7 +13,7 @@ const MobileStickyCTA = ({
   title = "Interested?",
   whatsappMessage = "Hi, I'd like to enquire about your services.",
 }) => {
-  const whatsappUrl = `https://wa.me/919177787635?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappUrl = `https://wa.me/${agency.whatsapp}?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <Box

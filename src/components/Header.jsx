@@ -24,10 +24,11 @@ import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import MegaMenu from "./nav/MegaMenu";
 import logo from "../assets/images/logo.webp";
+import { agency } from "../config/agency";
 
 const CTA = { label: "Get a Free Quote", href: "/contact" };
-const PHONE = "+919177787635";
-const PHONE_DISPLAY = "+91 91777 87635";
+const PHONE = agency.supportPhone.replace(/[^+\d]/g, "");
+const PHONE_DISPLAY = agency.supportPhone;
 
 // Build the mega-menu column config from server-fetched menuData.
 function buildMenus(menuData) {
@@ -228,7 +229,7 @@ const Header = ({ menuData }) => {
             <Box
               component="img"
               src={logo.src}
-              alt="Origin Tours"
+              alt={agency.name}
               width={420}
               height={100}
               sx={{ height: { xs: 28, sm: 32, md: 38, lg: 42 }, width: "auto" }}
@@ -401,7 +402,7 @@ const Header = ({ menuData }) => {
             <Box
               component="img"
               src={logo.src}
-              alt="Origin Tours"
+              alt={agency.name}
               width={420}
               height={100}
               sx={{ height: 32, width: "auto" }}

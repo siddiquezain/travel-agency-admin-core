@@ -1,6 +1,7 @@
 import { prisma } from "@/core/lib/prisma";
 import DestinationsClient from "./DestinationsClient";
 import { breadcrumbJsonLd } from "@/lib/service-jsonld";
+import { agency } from "@/config/agency";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -14,13 +15,13 @@ export const dynamic = "force-dynamic";
 export const metadata = {
   title: {
     absolute:
-      "Travel Destinations – Guides & Inspiration | Origin Tours and Travels",
+      `Travel Destinations – Guides & Inspiration | ${agency.name}`,
   },
   description:
-    "Explore in-depth destination guides — best time to visit, top attractions, culture, cuisine and travel tips for Dubai, Bali, Thailand and more, from Hyderabad's trusted travel agency.",
+    "Explore in-depth destination guides — best time to visit, top attractions, culture, cuisine and travel tips for Dubai, Bali, Thailand and more.",
   alternates: { canonical: "/destinations" },
   openGraph: {
-    title: "Travel Destinations | Origin Tours and Travels",
+    title: `Travel Destinations | ${agency.name}`,
     description:
       "In-depth destination guides — best time to visit, attractions, culture and tips.",
     url: "/destinations",

@@ -245,7 +245,7 @@ export default function SettingsForm({ initial }: { initial: Setting }) {
                                 className={inputCls}
                                 value={form.companyName}
                                 onChange={(e) => set("companyName", e.target.value)}
-                                placeholder="Origin Tours and Travels"
+                                placeholder="Your Agency Name"
                             />
                         </div>
                         <div className="sm:col-span-2">
@@ -278,7 +278,7 @@ export default function SettingsForm({ initial }: { initial: Setting }) {
                                 className={inputCls}
                                 value={form.supportPhone}
                                 onChange={(e) => set("supportPhone", e.target.value)}
-                                placeholder="+91 91777 87635"
+                                placeholder="+1 000 000 0000"
                             />
                         </div>
                         <div>
@@ -287,7 +287,7 @@ export default function SettingsForm({ initial }: { initial: Setting }) {
                                 className={inputCls}
                                 value={form.whatsapp}
                                 onChange={(e) => set("whatsapp", e.target.value)}
-                                placeholder="+919177787635"
+                                placeholder="+10000000000"
                             />
                         </div>
                         <div>
@@ -296,7 +296,7 @@ export default function SettingsForm({ initial }: { initial: Setting }) {
                                 className={inputCls}
                                 value={form.country}
                                 onChange={(e) => set("country", e.target.value)}
-                                placeholder="India"
+                                placeholder="Your Country"
                             />
                         </div>
                         <div className="sm:col-span-2">
@@ -305,7 +305,7 @@ export default function SettingsForm({ initial }: { initial: Setting }) {
                                 className={inputCls}
                                 value={form.addressLine}
                                 onChange={(e) => set("addressLine", e.target.value)}
-                                placeholder="Third Floor, Serene Heights, Humayun Nagar Rd, Masab Tank"
+                                placeholder="123 Main Street"
                             />
                         </div>
                         <div>
@@ -314,7 +314,7 @@ export default function SettingsForm({ initial }: { initial: Setting }) {
                                 className={inputCls}
                                 value={form.city}
                                 onChange={(e) => set("city", e.target.value)}
-                                placeholder="Hyderabad"
+                                placeholder="Your City"
                             />
                         </div>
                         <div>
@@ -323,7 +323,7 @@ export default function SettingsForm({ initial }: { initial: Setting }) {
                                 className={inputCls}
                                 value={form.state}
                                 onChange={(e) => set("state", e.target.value)}
-                                placeholder="Telangana"
+                                placeholder="Your State / Region"
                             />
                         </div>
                         <div>
@@ -332,7 +332,7 @@ export default function SettingsForm({ initial }: { initial: Setting }) {
                                 className={inputCls}
                                 value={form.postalCode}
                                 onChange={(e) => set("postalCode", e.target.value)}
-                                placeholder="500028"
+                                placeholder="00000"
                             />
                         </div>
                     </div>
@@ -569,7 +569,7 @@ export default function SettingsForm({ initial }: { initial: Setting }) {
                                     className={inputCls}
                                     value={form.smtpUser}
                                     onChange={(e) => set("smtpUser", e.target.value)}
-                                    placeholder="bookings@origintours.example"
+                                    placeholder="bookings@youragency.example"
                                     autoComplete="off"
                                 />
                             </div>
@@ -602,7 +602,7 @@ export default function SettingsForm({ initial }: { initial: Setting }) {
                                     className={inputCls}
                                     value={form.inquiryFrom}
                                     onChange={(e) => set("inquiryFrom", e.target.value)}
-                                    placeholder='"Origin Tours" <bookings@origintours.example>'
+                                    placeholder='"Your Agency" <bookings@youragency.example>'
                                 />
                             </div>
                             <div>
@@ -612,7 +612,7 @@ export default function SettingsForm({ initial }: { initial: Setting }) {
                                     className={inputCls}
                                     value={form.inquiryTo}
                                     onChange={(e) => set("inquiryTo", e.target.value)}
-                                    placeholder="bookings@origintours.example"
+                                    placeholder="bookings@youragency.example"
                                 />
                             </div>
                         </div>

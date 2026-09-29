@@ -46,7 +46,7 @@ function LoginForm() {
         <div className="min-h-screen flex items-center justify-center bg-slate-50">
             <div className="w-full max-w-md space-y-8 px-4">
                 <div className="text-center">
-                    <h1 className="text-3xl font-bold tracking-tight text-slate-900">Origin Admin</h1>
+                    <h1 className="text-3xl font-bold tracking-tight text-slate-900">Admin Panel</h1>
                     <p className="mt-2 text-sm text-slate-500">Sign in to manage your travel agency</p>
                 </div>
 
@@ -71,7 +71,7 @@ function LoginForm() {
                             autoComplete="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            placeholder="admin@origin.com"
+                            placeholder="admin@example.com"
                             className="block w-full rounded-md border border-slate-300 px-3 py-2 text-slate-900 shadow-sm placeholder:text-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500 sm:text-sm"
                         />
                     </div>

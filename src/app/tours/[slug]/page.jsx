@@ -6,6 +6,7 @@ import { touristTripJsonLd, breadcrumbJsonLd } from "@/lib/service-jsonld";
 import { normaliseTourDetail } from "@/lib/public-detail";
 import { isUmrahTour } from "@/modules/tours/tour-utils";
 import { getRelatedTours, getRelatedUmrahTours } from "@/lib/related";
+import { agency } from "@/config/agency";
 
 export const revalidate = 300;
 
@@ -25,7 +26,7 @@ export async function generateMetadata({ params }) {
 
   const description =
     (tour.description ?? "").slice(0, 160) ||
-    `Book ${tour.title} with Origin Tours and Travels — Hyderabad's trusted travel partner.`;
+    `Book ${tour.title} with ${agency.name} — your trusted travel partner.`;
   const images = Array.isArray(tour.images) ? tour.images : [];
   const image = typeof images[0] === "string" ? images[0] : "/og-default.jpg";
   const canonical = `/tours/${tour.slug}`;
@@ -35,7 +36,7 @@ export async function generateMetadata({ params }) {
     description,
     alternates: { canonical },
     openGraph: {
-      title: `${tour.title} | Origin Tours and Travels`,
+      title: `${tour.title} | ${agency.name}`,
       description,
       url: canonical,
       type: "article",

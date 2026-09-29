@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
+import { agency } from "@/config/agency";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Contact Origin Tours & Travels – Hyderabad Travel Agency",
+    absolute: `Contact ${agency.name} – Travel Agency`,
   },
   description:
-    "Get in touch with Origin Tours & Travels in Hyderabad. Call, WhatsApp or visit our office for bookings, packages, visa queries and travel assistance.",
+    `Get in touch with ${agency.name}. Call, WhatsApp or visit our office for bookings, packages, visa queries and travel assistance.`,
   keywords:
-    "contact travel agency Hyderabad, travel agent phone number Hyderabad, travel agent near me Hyderabad, book travel Hyderabad, Origin Tours contact number, Origin Tours Masab Tank Hyderabad",
+    "contact travel agency, travel agent phone number, book travel",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Contact Origin Tours & Travels – Hyderabad Travel Agency",
+    title: `Contact ${agency.name} – Travel Agency`,
     description:
-      "Call, WhatsApp or visit our Hyderabad office for bookings, packages, visa queries and travel assistance.",
+      `Call, WhatsApp or visit our office for bookings, packages, visa queries and travel assistance.`,
     url: "/contact",
     type: "website",
   },

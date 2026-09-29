@@ -4,6 +4,7 @@ import VisaDetailClient from "./VisaDetailClient";
 import { serviceJsonLd, breadcrumbJsonLd } from "@/lib/service-jsonld";
 import { normaliseVisaDetail, buildVisaTitle } from "@/lib/public-detail";
 import { getRelatedVisas } from "@/lib/related";
+import { agency } from "@/config/agency";
 
 export const revalidate = 300;
 
@@ -24,7 +25,7 @@ export async function generateMetadata({ params }) {
   const title = buildVisaTitle(visa.country, visa.type);
   const description =
     (visa.description ?? "").slice(0, 160) ||
-    `Apply for ${title} through Origin Tours and Travels — fast, reliable processing from Hyderabad.`;
+    `Apply for ${title} through ${agency.name} — fast, reliable processing.`;
   const images = Array.isArray(visa.images) ? visa.images : [];
   const image = typeof images[0] === "string" ? images[0] : "/og-default.jpg";
   const canonical = `/visas/${visa.slug}`;
@@ -34,7 +35,7 @@ export async function generateMetadata({ params }) {
     description,
     alternates: { canonical },
     openGraph: {
-      title: `${title} | Origin Tours and Travels`,
+      title: `${title} | ${agency.name}`,
       description,
       url: canonical,
       type: "article",

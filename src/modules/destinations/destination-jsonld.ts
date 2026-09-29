@@ -22,7 +22,7 @@ export function destinationJsonLd(args: {
   const url = abs(`/destinations/${args.slug}`);
   const description =
     (args.description ?? "").trim() ||
-    `${args.name} travel guide — best time to visit, top attractions, culture, and tips from Origin Tours and Travels.`;
+    `${args.name} travel guide — best time to visit, top attractions, culture, and tips.`;
   return {
     "@type": "TouristDestination",
     name: args.name,

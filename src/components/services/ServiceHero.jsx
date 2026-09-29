@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Box, Container, Typography, Stack, Button } from "@mui/material";
 import ArrowForward from "@mui/icons-material/ArrowForward";
 import { radius } from "../../config/designSystem";
+import { agency } from "../../config/agency";
 
 /**
  * Reusable hero for static service pages.
@@ -25,7 +26,7 @@ const ServiceHero = ({
   image,
   icon: Icon,
   primaryCta = { label: "Get a Free Quote", href: "/contact" },
-  secondaryCta = { label: "Call +91 91777 87635", href: "tel:+919177787635" },
+  secondaryCta = { label: `Call ${agency.supportPhone}`, href: `tel:${agency.supportPhone.replace(/[^+\d]/g, "")}` },
 }) => {
   return (
     <Box

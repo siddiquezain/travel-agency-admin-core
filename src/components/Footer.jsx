@@ -21,6 +21,7 @@ import YouTube from "@mui/icons-material/YouTube";
 import mastercardIcon from "../assets/images/icons/mastercard.webp";
 import gpayIcon from "../assets/images/icons/gpay.webp";
 import logo from "../assets/images/logo.webp";
+import { agency } from "../config/agency";
 
 const DEFAULT_HOLIDAY_PACKAGES = [
   { name: "Delhi Agra Jaipur Tour Packages", to: "/tours", keywords: ["delhi", "agra", "jaipur"] },
@@ -48,10 +49,10 @@ const Footer = ({ popularTours, popularVisas } = {}) => {
   const theme = useTheme();
 
   const socialIcons = [
-    { Icon: Facebook, color: "white", href: "https://facebook.com/origintoursandtravels", label: "Facebook" },
-    { Icon: Twitter, color: "white", href: "https://twitter.com/origintravels", label: "Twitter" },
-    { Icon: YouTube, color: "white", href: "https://www.youtube.com/@origintoursandtravels", label: "YouTube" },
-    { Icon: Instagram, color: "white", href: "https://instagram.com/origintoursandtravels", label: "Instagram" },
+    { Icon: Facebook, color: "white", href: "#", label: "Facebook" },
+    { Icon: Twitter, color: "white", href: "#", label: "Twitter" },
+    { Icon: YouTube, color: "white", href: "#", label: "YouTube" },
+    { Icon: Instagram, color: "white", href: "#", label: "Instagram" },
   ];
 
   const holidayPackages = resolveLinks(DEFAULT_HOLIDAY_PACKAGES, popularTours);
@@ -204,7 +205,7 @@ const Footer = ({ popularTours, popularVisas } = {}) => {
                 <Box
                   component="img"
                   src={logo.src}
-                  alt="Origin Tours"
+                  alt={agency.name}
                   width={420}
                   height={100}
                   loading="lazy"
@@ -222,11 +223,7 @@ const Footer = ({ popularTours, popularVisas } = {}) => {
                   display: { xs: "none", sm: "block" },
                 }}
               >
-                Origin Tours and Travels is a premier agency offering air
-                ticketing, tourism, and hotel reservations, dedicated to
-                delivering exceptional travel services with a focus on quality
-                and customer satisfaction. Led by a team of experienced
-                professionals with over 10 years of expertise.
+                {agency.tagline}
               </Typography>
 
               <Stack spacing={1.5} sx={{ mt: { xs: 0, md: 2 } }}>
@@ -237,13 +234,12 @@ const Footer = ({ popularTours, popularVisas } = {}) => {
                     fontSize: { xs: "0.8rem", md: "0.875rem" },
                   }}
                 >
-                  Third Floor, Serene Heights, Humayun Nagar Rd, Masab Tank,
-                  Hyderabad-500028, Telangana, India.
+                  {agency.address}
                 </Typography>
                 <Typography
                   variant="body2"
                   component="a"
-                  href="tel:+919177787635"
+                  href={`tel:${agency.supportPhone}`}
                   sx={{
                     color: "grey.500",
                     fontSize: { xs: "0.8rem", md: "0.875rem" },
@@ -252,12 +248,12 @@ const Footer = ({ popularTours, popularVisas } = {}) => {
                     transition: "color 0.3s",
                   }}
                 >
-                  Phone: +91 91777 87635
+                  Phone: {agency.supportPhone}
                 </Typography>
                 <Typography
                   variant="body2"
                   component="a"
-                  href="mailto:sales@origingroups.com"
+                  href={`mailto:${agency.supportEmail}`}
                   sx={{
                     color: "grey.500",
                     fontSize: { xs: "0.8rem", md: "0.875rem" },
@@ -266,7 +262,7 @@ const Footer = ({ popularTours, popularVisas } = {}) => {
                     transition: "color 0.3s",
                   }}
                 >
-                  Mail: sales@origingroups.com
+                  Mail: {agency.supportEmail}
                 </Typography>
               </Stack>
             </Stack>
@@ -357,19 +353,7 @@ const Footer = ({ popularTours, popularVisas } = {}) => {
               textAlign: { xs: "center", md: "right" },
             }}
           >
-            Copyright &copy; {new Date().getFullYear()} Origin Tours and Travels. Developed by{" "}
-            <MuiLink
-              href="https://originsoftwares.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              sx={{
-                color: "#2AB0C7",
-                textDecoration: "none",
-                "&:hover": { color: "common.white" },
-              }}
-            >
-              ORIGIN SOFTWARES
-            </MuiLink>
+            Copyright &copy; {new Date().getFullYear()} {agency.name}
           </Typography>
         </Box>
       </Container>

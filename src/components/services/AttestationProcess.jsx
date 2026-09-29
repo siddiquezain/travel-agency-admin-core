@@ -79,18 +79,17 @@ export default function AttestationProcess() {
           mb: 1.5,
         }}
       >
-        How certificate attestation works in Hyderabad
+        How certificate attestation works
       </Typography>
       <Typography
         variant="body1"
         sx={{ color: "text.secondary", maxWidth: 820, mb: 4, lineHeight: 1.8 }}
       >
         Certificate attestation is a step-by-step legal verification that proves
-        your Indian documents are genuine so they can be used abroad — for work
+        your documents are genuine so they can be used abroad — for work
         visas, family visas, higher education or business. The exact chain
         depends on the document type and destination country. Here is the
-        standard process we handle end-to-end from our Masab Tank, Hyderabad
-        office.
+        standard process we handle end-to-end.
       </Typography>
 
       <Grid container spacing={{ xs: 2, md: 3 }} sx={{ mb: 5 }}>

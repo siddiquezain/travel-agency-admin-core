@@ -2,6 +2,7 @@ import { prisma } from "@/core/lib/prisma";
 import BlogClient from "./BlogClient";
 import { breadcrumbJsonLd } from "@/lib/service-jsonld";
 import { publishedBlogWhere } from "@/modules/blog/blog";
+import { agency } from "@/config/agency";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -15,15 +16,15 @@ export const dynamic = "force-dynamic";
 export const metadata = {
   title: {
     absolute:
-      "Travel Resources – Guides, Tips & Destinations | Origin Tours and Travels",
+      `Travel Resources – Guides, Tips & Destinations | ${agency.name}`,
   },
   description:
-    "Travel guides, visa tips and destination features from Hyderabad's trusted travel agency. Plan smarter trips with expert advice on Umrah, Hajj, India and international holidays.",
+    "Travel guides, visa tips and destination features from your trusted travel agency. Plan smarter trips with expert advice.",
   alternates: { canonical: "/travel-resources" },
   openGraph: {
-    title: "Travel Resources | Origin Tours and Travels",
+    title: `Travel Resources | ${agency.name}`,
     description:
-      "Travel guides, visa tips and destination features from Hyderabad's trusted travel agency.",
+      "Travel guides, visa tips and destination features from your trusted travel agency.",
     url: "/travel-resources",
     type: "website",
   },

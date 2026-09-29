@@ -4,10 +4,11 @@ import { Box, Container, Typography, Stack, Button } from "@mui/material";
 import Phone from "@mui/icons-material/Phone";
 import WhatsApp from "@mui/icons-material/WhatsApp";
 import { radius } from "../../config/designSystem";
+import { agency } from "../../config/agency";
 
-const PHONE = "+91 91777 87635";
-const PHONE_HREF = "tel:+919177787635";
-const WHATSAPP_HREF = "https://wa.me/919177787635";
+const PHONE = agency.supportPhone;
+const PHONE_HREF = `tel:${agency.supportPhone.replace(/[^+\d]/g, "")}`;
+const WHATSAPP_HREF = `https://wa.me/${agency.whatsapp}`;
 
 /**
  * Reusable closing call-to-action banner for service pages.
@@ -18,7 +19,7 @@ const WHATSAPP_HREF = "https://wa.me/919177787635";
  */
 const ServiceCTA = ({
   title = "Ready to plan your trip?",
-  text = "Call or WhatsApp our travel experts in Hyderabad for the best fares and a fast, friendly quote.",
+  text = "Call or WhatsApp our travel experts for the best fares and a fast, friendly quote.",
 }) => {
   return (
     <Box

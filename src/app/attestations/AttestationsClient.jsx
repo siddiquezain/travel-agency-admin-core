@@ -167,7 +167,7 @@ const AttestationsClient = ({ initialItems = [] }) => {
         <Box
           component="img"
           src={attestationsHero.src}
-          alt="Certificate Attestation — Origin Tours and Travels"
+          alt="Certificate Attestation Services"
           loading="eager"
           sx={{
             position: "absolute",

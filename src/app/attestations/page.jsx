@@ -3,16 +3,17 @@ import { normaliseAttestation } from "@/modules/tours/tour-utils";
 import AttestationsClient from "./AttestationsClient";
 import FaqAccordion from "../../components/common/FaqAccordion";
 import { serviceJsonLd, breadcrumbJsonLd } from "@/lib/service-jsonld";
+import { agency } from "@/config/agency";
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     serviceJsonLd({
-      name: "Certificate Attestation Services in Hyderabad",
+      name: "Certificate Attestation Services",
       serviceType: "Certificate attestation and apostille",
       path: "/attestations",
       description:
-        "HRD, MEA, embassy and MOFA attestation plus apostille for educational, personal and commercial documents in Hyderabad — for travel, work and immigration.",
+        "HRD, MEA, embassy and MOFA attestation plus apostille for educational, personal and commercial documents — for travel, work and immigration.",
     }),
     breadcrumbJsonLd([{ name: "Attestation Services", path: "/attestations" }]),
   ],
@@ -22,17 +23,17 @@ export const dynamic = "force-dynamic";
 
 export const metadata = {
   title: {
-    absolute: "Certificate Attestation Services Hyderabad – Origin Tours",
+    absolute: `Certificate Attestation Services – ${agency.name}`,
   },
   description:
-    "Need document attestation? Origin Tours & Travels, Hyderabad provides quick certificate attestation services for travel, work & immigration purposes.",
+    `Need document attestation? ${agency.name} provides quick certificate attestation services for travel, work & immigration purposes.`,
   keywords:
-    "certificate attestation Hyderabad, document attestation agent Hyderabad, attestation for UAE visa Hyderabad, HRD attestation Hyderabad, MEA attestation Hyderabad, attestation services near me Hyderabad, document verification Hyderabad",
+    "certificate attestation, document attestation, HRD attestation, MEA attestation, apostille services",
   alternates: { canonical: "/attestations" },
   openGraph: {
-    title: "Certificate Attestation Services Hyderabad – Origin Tours",
+    title: `Certificate Attestation Services – ${agency.name}`,
     description:
-      "Quick, reliable certificate attestation for educational, personal and commercial documents, from Hyderabad.",
+      "Quick, reliable certificate attestation for educational, personal and commercial documents.",
     url: "/attestations",
     type: "website",
   },
@@ -40,7 +41,7 @@ export const metadata = {
 
 const attestationFaqs = [
   {
-    q: "How long does certificate attestation take in Hyderabad?",
+    q: "How long does certificate attestation take?",
     a: "Usually 7–15 working days depending on document type and destination country. Urgent processing may be available.",
   },
   {

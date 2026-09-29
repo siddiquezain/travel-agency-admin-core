@@ -1,24 +1,24 @@
 import React from "react";
 import FaqAccordion from "../common/FaqAccordion";
+import { agency } from "../../config/agency";
 
-// Homepage FAQs. Contact details are kept consistent with the rest of
-// the site (NAP consistency matters for local SEO).
+// Homepage FAQs. Update these to match your agency's details.
 const faqs = [
   {
-    q: "Which services does Origin Tours & Travels offer?",
-    a: "We offer air ticketing, Umrah & Hajj packages, domestic & international holiday packages, visa stamping, hotel reservations, transport bookings and certificate attestation services.",
+    q: `Which services does ${agency.name} offer?`,
+    a: "We offer air ticketing, holiday packages, visa stamping, hotel reservations, transport bookings and certificate attestation services.",
   },
   {
-    q: "Is Origin Tours & Travels based in Hyderabad?",
-    a: "Yes, our office is located at Third Floor, Serene Heights, Humayun Nagar Road, Masab Tank, Hyderabad-500028, Telangana.",
+    q: "How do I get in touch?",
+    a: `You can reach us by phone, email or WhatsApp. Visit our Contact page for full details.`,
   },
   {
     q: "How many years of experience does your team have?",
-    a: "Over 10 years. We have been arranging travel for individuals, families and groups since 2010.",
+    a: "Our experienced team has been arranging travel for individuals, families and groups for many years.",
   },
   {
     q: "Can I book via WhatsApp?",
-    a: "Yes, WhatsApp us on +91 91777 87635. Our team is available to assist with queries and bookings.",
+    a: `Yes, WhatsApp us on ${agency.supportPhone}. Our team is available to assist with queries and bookings.`,
   },
 ];
 

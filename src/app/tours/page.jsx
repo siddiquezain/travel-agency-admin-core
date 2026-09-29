@@ -3,16 +3,17 @@ import { isUmrahTour, normaliseTour } from "@/modules/tours/tour-utils";
 import ToursClient from "./ToursClient";
 import FaqAccordion from "../../components/common/FaqAccordion";
 import { serviceJsonLd, breadcrumbJsonLd } from "@/lib/service-jsonld";
+import { agency } from "@/config/agency";
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     serviceJsonLd({
-      name: "Holiday Packages from Hyderabad",
+      name: "Holiday Packages",
       serviceType: "Holiday and tour packages",
       path: "/tours",
       description:
-        "Domestic and international holiday packages from Hyderabad — Kerala, Goa, Rajasthan, Dubai, Thailand, Europe and more — customised for families, couples and groups.",
+        "Domestic and international holiday packages — customised for families, couples and groups.",
     }),
     breadcrumbJsonLd([{ name: "Holiday Packages", path: "/tours" }]),
   ],
@@ -23,18 +24,18 @@ export const dynamic = "force-dynamic";
 export const metadata = {
   title: {
     absolute:
-      "Holiday Packages from Hyderabad – Domestic & International | Origin Tours",
+      `Holiday Packages – Domestic & International | ${agency.name}`,
   },
   description:
-    "Domestic & international holiday packages from Hyderabad — Kerala, Goa, Rajasthan, Dubai, Thailand, Europe & more. Customised tours for families, couples & groups.",
+    "Domestic & international holiday packages — customised tours for families, couples & groups.",
   keywords:
-    "domestic holiday packages Hyderabad, India tour packages from Hyderabad, international holiday packages Hyderabad, Dubai tour package from Hyderabad, Kerala tour package Hyderabad, Europe tour packages from India, family tour packages India",
+    "domestic holiday packages, international holiday packages, family tour packages",
   alternates: { canonical: "/tours" },
   openGraph: {
     title:
-      "Holiday Packages from Hyderabad – Domestic & International | Origin Tours",
+      `Holiday Packages – Domestic & International | ${agency.name}`,
     description:
-      "Customised domestic and international holiday packages from Hyderabad for families, couples and groups.",
+      "Customised domestic and international holiday packages for families, couples and groups.",
     url: "/tours",
     type: "website",
   },
@@ -42,15 +43,15 @@ export const metadata = {
 
 const toursFaqs = [
   {
-    q: "What are the most popular domestic packages from Hyderabad?",
+    q: "What are the most popular domestic packages?",
     a: "Kerala, Goa, Andaman, Rajasthan and Shimla–Manali are consistently our most booked domestic destinations.",
   },
   {
-    q: "What international destinations do you offer from Hyderabad?",
+    q: "What international destinations do you offer?",
     a: "Dubai, Thailand, Malaysia, Singapore, Europe, Maldives, Turkey, Sri Lanka, Australia and many more destinations.",
   },
   {
-    q: "Do your packages include flights from Hyderabad?",
+    q: "Do your packages include flights?",
     a: "Most packages include return flights. Train or road transport options are also available for nearby domestic destinations.",
   },
   {

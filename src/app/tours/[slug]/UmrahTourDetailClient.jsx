@@ -465,11 +465,11 @@ export default function UmrahTourDetailClient({ initialData, related = [] }) {
               Trusted Partner
             </span>
             <h2 className={`${PLAYFAIR} text-3xl text-white font-semibold mt-2 mb-2 leading-tight`}>
-              Why Choose <span className="text-[#c9a227]">Origin Tours and Travels</span>?
+              Why Choose <span className="text-[#c9a227]">Us</span>?
             </h2>
             <p className={`text-white/60 ${LORA} text-sm mb-8 leading-relaxed`}>
-              Origin Tours and Travels is a trusted travel agency specializing in Umrah packages,
-              international tours, and customized travel services from Hyderabad and across India.
+              We are a trusted travel agency specializing in Umrah packages,
+              international tours, and customized travel services.
               Our focus is on delivering professional service, transparent pricing, comfortable
               travel experiences, and dedicated customer support.
             </p>

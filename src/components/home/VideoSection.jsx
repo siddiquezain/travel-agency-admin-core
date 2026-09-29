@@ -4,9 +4,9 @@ import { Box, Container, Typography } from "@mui/material";
 import PlayArrowRoundedIcon from "@mui/icons-material/PlayArrowRounded";
 import { radius, shadow, sectionColors } from "../../config/designSystem";
 
-// Brand promo video. Change these two constants to swap the video.
-const VIDEO_ID = "y0aFvdNH5aM";
-const VIDEO_TITLE = "Best Travel Agency in Hyderabad – Origin Tours and Travels";
+// Brand promo video. Replace VIDEO_ID with your own YouTube video ID.
+const VIDEO_ID = "dQw4w9WgXcQ"; // TODO: replace with your agency's promo video ID
+const VIDEO_TITLE = "Your Travel Agency – Explore the World";
 
 // Click-to-play facade: we render the lightweight thumbnail first and only load
 // YouTube's (heavy) player iframe once the user clicks — keeps initial load fast.
@@ -63,7 +63,7 @@ export default function VideoSection() {
               wordBreak: "break-word",
             }}
           >
-            Best Travel Agency in Hyderabad
+            Your Trusted Travel Agency
           </Typography>
           <Typography
             color="text.secondary"
@@ -74,8 +74,7 @@ export default function VideoSection() {
               lineHeight: 1.8,
             }}
           >
-            Watch our story — a decade of crafting unforgettable journeys,
-            Umrah pilgrimages and hassle-free travel from Hyderabad.
+            Watch our story — crafting unforgettable journeys and hassle-free travel experiences.
           </Typography>
         </Box>
 

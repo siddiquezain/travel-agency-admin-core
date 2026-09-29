@@ -3,7 +3,7 @@ import { prisma } from "@/core/lib/prisma";
 import DestinationGuideClient from "./DestinationGuideClient";
 import { destinationGraph } from "@/modules/destinations/destination-jsonld";
 
-const SITE_URL = "https://origintoursandtravels.com";
+const SITE_URL = process.env.NEXTAUTH_URL || "http://localhost:3000";
 
 // Per-request so a newly-activated destination guide is live immediately.
 export const dynamic = "force-dynamic";
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }) {
   const description =
     dest.metaDescription ||
     dest.description ||
-    `Plan your trip to ${dest.name}: best time to visit, top attractions, culture, cuisine and travel tips from Origin Tours and Travels.`;
+    `Plan your trip to ${dest.name}: best time to visit, top attractions, culture, cuisine and travel tips.`;
   const canonical = `/destinations/${dest.slug}`;
   const image = dest.heroImage || "/og-default.jpg";
 

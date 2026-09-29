@@ -173,7 +173,7 @@ const VisasClient = ({ initialItems = [] }) => {
         <Box
           component="img"
           src={visasHero.src}
-          alt="Visa Services — Origin Tours and Travels"
+          alt="Visa Services"
           loading="eager"
           sx={{
             position: "absolute",

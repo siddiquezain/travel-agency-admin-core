@@ -65,7 +65,7 @@ function HeroSlide({ slide }) {
         <Box
           component="img"
           src={slide.image}
-          alt={slide.title || "Origin Tours and Travels"}
+          alt={slide.title || "Hero slide"}
           loading="eager"
           sx={{
             position: "absolute",
@@ -145,7 +145,7 @@ export default function HeroSlideCarousel({ slides, autoplay, interval, speed, l
       }}
     >
       <Typography variant="h1" component="h1" sx={visuallyHidden}>
-        Origin Tours &amp; Travels — Umrah, Hajj &amp; Holiday Packages from Hyderabad
+        Holiday Packages, Umrah, Hajj &amp; Travel Services
       </Typography>
       <Swiper
         modules={[Autoplay, Pagination, A11y]}
